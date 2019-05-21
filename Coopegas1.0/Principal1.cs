@@ -70,5 +70,32 @@ namespace Coopegas1._0
 
 
         }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+            if(rbidclientp.Checked==true)
+            {
+                dgvverclientprest.DataSource = oper.cosnsultaconresultado("select * from cliente where idclient ='"+txtbuscli.Text+"'");
+            }
+
+            else if(rbnombp.Checked==true)
+            {
+                dgvverclientprest.DataSource = oper.cosnsultaconresultado("select * from cliente where nombres like'%" + txtbuscli.Text + "%'");
+
+
+            }
+
+            else if(rbapellip.Checked==true)
+            {
+                dgvverclientprest.DataSource = oper.cosnsultaconresultado("select * from cliente where apellidos like'%" + txtbuscli.Text + "%'");
+
+            }
+
+            else if(rbcedup.Checked==true)
+            {
+                dgvverclientprest.DataSource = oper.cosnsultaconresultado("select * from cliente where cedula like'%" + txtbuscli.Text + "%'");
+
+            }
+        }
     }
 }

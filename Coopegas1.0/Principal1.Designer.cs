@@ -66,7 +66,7 @@
             this.btnlimp = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgvverclientprest = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtbuscli = new System.Windows.Forms.TextBox();
             this.rbidclientp = new System.Windows.Forms.RadioButton();
             this.rbnombp = new System.Windows.Forms.RadioButton();
             this.rbapellip = new System.Windows.Forms.RadioButton();
@@ -498,11 +498,14 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.Controls.Add(this.rbcedup);
             this.groupBox3.Controls.Add(this.rbapellip);
             this.groupBox3.Controls.Add(this.rbnombp);
             this.groupBox3.Controls.Add(this.rbidclientp);
-            this.groupBox3.Controls.Add(this.textBox1);
+            this.groupBox3.Controls.Add(this.txtbuscli);
             this.groupBox3.Controls.Add(this.dgvverclientprest);
             this.groupBox3.Location = new System.Drawing.Point(440, 12);
             this.groupBox3.Name = "groupBox3";
@@ -524,12 +527,13 @@
             this.dgvverclientprest.TabIndex = 0;
             this.dgvverclientprest.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvverclientprest_CellContentClick);
             // 
-            // textBox1
+            // txtbuscli
             // 
-            this.textBox1.Location = new System.Drawing.Point(6, 42);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(161, 20);
-            this.textBox1.TabIndex = 1;
+            this.txtbuscli.Location = new System.Drawing.Point(6, 42);
+            this.txtbuscli.Name = "txtbuscli";
+            this.txtbuscli.Size = new System.Drawing.Size(161, 20);
+            this.txtbuscli.TabIndex = 1;
+            this.txtbuscli.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
             // rbidclientp
             // 
@@ -911,7 +915,7 @@
         private System.Windows.Forms.RadioButton rbapellip;
         private System.Windows.Forms.RadioButton rbnombp;
         private System.Windows.Forms.RadioButton rbidclientp;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtbuscli;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtidcleintp;
         private System.Windows.Forms.ComboBox cmbtiemp;
