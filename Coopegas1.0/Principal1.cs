@@ -615,7 +615,7 @@ namespace Coopegas1._0
             DialogResult result = MessageBox.Show("Seguro que desea Modificar?", "Modificar", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
-                oper.consultasinreaultado("update desembolsa set iddesmb = '"+txtidmodprest.Text+"',monto = '"+txtmodmont.Text+"',fecha ='"+dtpmodfechprest.Text+"',interes'"+txtmodintprest.Text+"', tiempo = '"+cmbmodtiemp.Text+ "',cliente_idclient ='"+txtidmodprestcli.Text+"'");
+                oper.consultasinreaultado("update desembolso set monto = '"+txtmodmont.Text+"',fecha ='"+dtpmodfechprest.Text+"',interes ='"+txtmodintprest.Text+"', tiempo = '"+cmbmodtiemp.Text+ "',cliente_idclient ='"+txtidmodprestcli.Text+"' where iddesemb = '"+txtidmodprest.Text+"'");
                 MessageBox.Show("Datos Actualizados");
                 dgvmodprest.DataSource = oper.cosnsultaconresultado("select iddesemb as ID,cliente_idclient as IDC,nombres as Nombres,apellidos as Apellidos, cedula as Cedula,interes as Interes,monto ,monto*(interes/100.00) as Cargo ,monto*(interes/100.00)+monto as Monto,fecha as Fecha, tiempo as Meses, (monto*(interes/100.00)+monto)/tiempo as Cuotas from desembolso  inner join cliente on   idclient = cliente_idclient");
                 txtidmodprest.Clear();
