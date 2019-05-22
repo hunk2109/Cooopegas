@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2026
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Coopegas1.0", "Coopegas1.0\Coopegas1.0.csproj", "{EFBCD89B-5EB3-4323-A967-58D4837EC23B}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "COOPEGASI1.0", "COOPEGASI1.0\COOPEGASI1.0.vdproj", "{6FEE9C14-7EDB-465A-A7CB-B27A1C6686DD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{EFBCD89B-5EB3-4323-A967-58D4837EC23B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EFBCD89B-5EB3-4323-A967-58D4837EC23B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EFBCD89B-5EB3-4323-A967-58D4837EC23B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FEE9C14-7EDB-465A-A7CB-B27A1C6686DD}.Debug|Any CPU.ActiveCfg = Debug
+		{6FEE9C14-7EDB-465A-A7CB-B27A1C6686DD}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
