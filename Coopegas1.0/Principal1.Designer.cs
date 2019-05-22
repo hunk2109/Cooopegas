@@ -169,6 +169,32 @@
             this.txtbuspresmod = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
             this.txtidmodprestcli = new System.Windows.Forms.TextBox();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.txtmoidpago = new System.Windows.Forms.TextBox();
+            this.txtmodipprespag = new System.Windows.Forms.TextBox();
+            this.txtmodidcleinpag = new System.Windows.Forms.TextBox();
+            this.txtmodmontpag = new System.Windows.Forms.TextBox();
+            this.dgvmodpago = new System.Windows.Forms.DataGridView();
+            this.btnmodpago = new System.Windows.Forms.Button();
+            this.btnborrarpag = new System.Windows.Forms.Button();
+            this.dtpmodpago = new System.Windows.Forms.DateTimePicker();
+            this.rbidmodpag = new System.Windows.Forms.RadioButton();
+            this.rbmodnombpag = new System.Windows.Forms.RadioButton();
+            this.rbmodcedupag = new System.Windows.Forms.RadioButton();
+            this.rbuserid = new System.Windows.Forms.RadioButton();
+            this.rbuseru = new System.Windows.Forms.RadioButton();
+            this.txtbususer = new System.Windows.Forms.TextBox();
+            this.rbidclientmod = new System.Windows.Forms.RadioButton();
+            this.rbmodnombcli = new System.Windows.Forms.RadioButton();
+            this.rbmodceducli = new System.Windows.Forms.RadioButton();
+            this.txtbuscl2 = new System.Windows.Forms.TextBox();
+            this.txtbuspagmod = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -200,12 +226,16 @@
             this.groupBox6.SuspendLayout();
             this.tabPage12.SuspendLayout();
             this.tabPage13.SuspendLayout();
+            this.tabPage14.SuspendLayout();
             this.groupBox8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvmodclient)).BeginInit();
             this.groupBox9.SuspendLayout();
             this.groupBox10.SuspendLayout();
             this.groupBox11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvmodprest)).BeginInit();
+            this.groupBox12.SuspendLayout();
+            this.groupBox13.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvmodpago)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -679,7 +709,7 @@
             this.tabPage7.Location = new System.Drawing.Point(4, 22);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(748, 362);
+            this.tabPage7.Size = new System.Drawing.Size(748, 399);
             this.tabPage7.TabIndex = 1;
             this.tabPage7.Text = "Ver Prestamos";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -694,7 +724,8 @@
             // 
             // btnimpr
             // 
-            this.btnimpr.Location = new System.Drawing.Point(7, 336);
+            this.btnimpr.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnimpr.Location = new System.Drawing.Point(7, 370);
             this.btnimpr.Name = "btnimpr";
             this.btnimpr.Size = new System.Drawing.Size(75, 23);
             this.btnimpr.TabIndex = 7;
@@ -762,7 +793,7 @@
             this.dgvvprest.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvvprest.Location = new System.Drawing.Point(6, 30);
             this.dgvvprest.Name = "dgvvprest";
-            this.dgvvprest.Size = new System.Drawing.Size(736, 304);
+            this.dgvvprest.Size = new System.Drawing.Size(736, 334);
             this.dgvvprest.TabIndex = 0;
             this.dgvvprest.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvvprest_CellContentClick);
             // 
@@ -1071,6 +1102,9 @@
             this.groupBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox7.Controls.Add(this.txtbususer);
+            this.groupBox7.Controls.Add(this.rbuseru);
+            this.groupBox7.Controls.Add(this.rbuserid);
             this.groupBox7.Controls.Add(this.dgvuser);
             this.groupBox7.Location = new System.Drawing.Point(340, 6);
             this.groupBox7.Name = "groupBox7";
@@ -1236,9 +1270,12 @@
             this.tabPage13.TabIndex = 2;
             this.tabPage13.Text = "Prestamos";
             this.tabPage13.UseVisualStyleBackColor = true;
+            this.tabPage13.Click += new System.EventHandler(this.tabPage13_Click);
             // 
             // tabPage14
             // 
+            this.tabPage14.Controls.Add(this.groupBox13);
+            this.tabPage14.Controls.Add(this.groupBox12);
             this.tabPage14.Location = new System.Drawing.Point(4, 22);
             this.tabPage14.Name = "tabPage14";
             this.tabPage14.Padding = new System.Windows.Forms.Padding(3);
@@ -1323,10 +1360,14 @@
             this.groupBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox8.Controls.Add(this.txtbuscl2);
+            this.groupBox8.Controls.Add(this.rbmodceducli);
+            this.groupBox8.Controls.Add(this.rbmodnombcli);
+            this.groupBox8.Controls.Add(this.rbidclientmod);
             this.groupBox8.Controls.Add(this.dgvmodclient);
-            this.groupBox8.Location = new System.Drawing.Point(458, 6);
+            this.groupBox8.Location = new System.Drawing.Point(335, 6);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(283, 387);
+            this.groupBox8.Size = new System.Drawing.Size(406, 387);
             this.groupBox8.TabIndex = 0;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Clientes";
@@ -1337,9 +1378,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvmodclient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvmodclient.Location = new System.Drawing.Point(6, 48);
+            this.dgvmodclient.Location = new System.Drawing.Point(7, 48);
             this.dgvmodclient.Name = "dgvmodclient";
-            this.dgvmodclient.Size = new System.Drawing.Size(271, 314);
+            this.dgvmodclient.Size = new System.Drawing.Size(393, 333);
             this.dgvmodclient.TabIndex = 1;
             this.dgvmodclient.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvmodclient_CellContentClick);
             // 
@@ -1650,6 +1691,7 @@
             this.txtborrprest.TabIndex = 13;
             this.txtborrprest.Text = "Borrar";
             this.txtborrprest.UseVisualStyleBackColor = true;
+            this.txtborrprest.Click += new System.EventHandler(this.txtborrprest_Click);
             // 
             // rbidmodprest
             // 
@@ -1708,9 +1750,9 @@
             this.label29.AutoSize = true;
             this.label29.Location = new System.Drawing.Point(7, 80);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(74, 13);
+            this.label29.Size = new System.Drawing.Size(79, 13);
             this.label29.TabIndex = 14;
-            this.label29.Text = "ID del Pretario";
+            this.label29.Text = "ID del Prestario";
             // 
             // txtidmodprestcli
             // 
@@ -1719,6 +1761,274 @@
             this.txtidmodprestcli.ReadOnly = true;
             this.txtidmodprestcli.Size = new System.Drawing.Size(100, 20);
             this.txtidmodprestcli.TabIndex = 15;
+            // 
+            // groupBox12
+            // 
+            this.groupBox12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupBox12.Controls.Add(this.dtpmodpago);
+            this.groupBox12.Controls.Add(this.btnborrarpag);
+            this.groupBox12.Controls.Add(this.btnmodpago);
+            this.groupBox12.Controls.Add(this.txtmodmontpag);
+            this.groupBox12.Controls.Add(this.txtmodidcleinpag);
+            this.groupBox12.Controls.Add(this.txtmodipprespag);
+            this.groupBox12.Controls.Add(this.txtmoidpago);
+            this.groupBox12.Controls.Add(this.label35);
+            this.groupBox12.Controls.Add(this.label34);
+            this.groupBox12.Controls.Add(this.label32);
+            this.groupBox12.Controls.Add(this.label31);
+            this.groupBox12.Controls.Add(this.label30);
+            this.groupBox12.Location = new System.Drawing.Point(6, 6);
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.Size = new System.Drawing.Size(217, 387);
+            this.groupBox12.TabIndex = 0;
+            this.groupBox12.TabStop = false;
+            this.groupBox12.Text = "Modificar";
+            // 
+            // groupBox13
+            // 
+            this.groupBox13.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox13.Controls.Add(this.txtbuspagmod);
+            this.groupBox13.Controls.Add(this.rbmodcedupag);
+            this.groupBox13.Controls.Add(this.rbmodnombpag);
+            this.groupBox13.Controls.Add(this.rbidmodpag);
+            this.groupBox13.Controls.Add(this.dgvmodpago);
+            this.groupBox13.Location = new System.Drawing.Point(337, 6);
+            this.groupBox13.Name = "groupBox13";
+            this.groupBox13.Size = new System.Drawing.Size(389, 387);
+            this.groupBox13.TabIndex = 1;
+            this.groupBox13.TabStop = false;
+            this.groupBox13.Text = "Pagos";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(13, 35);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(63, 13);
+            this.label30.TabIndex = 0;
+            this.label30.Text = "ID del Pago";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(13, 141);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(77, 13);
+            this.label31.TabIndex = 1;
+            this.label31.Text = "Monto Pagado";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(13, 176);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(37, 13);
+            this.label32.TabIndex = 2;
+            this.label32.Text = "Fecha";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(13, 108);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(69, 13);
+            this.label34.TabIndex = 4;
+            this.label34.Text = "ID del cliente";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(13, 75);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(82, 13);
+            this.label35.TabIndex = 5;
+            this.label35.Text = "ID del Prestamo";
+            // 
+            // txtmoidpago
+            // 
+            this.txtmoidpago.Location = new System.Drawing.Point(108, 32);
+            this.txtmoidpago.Name = "txtmoidpago";
+            this.txtmoidpago.ReadOnly = true;
+            this.txtmoidpago.Size = new System.Drawing.Size(100, 20);
+            this.txtmoidpago.TabIndex = 6;
+            // 
+            // txtmodipprespag
+            // 
+            this.txtmodipprespag.Location = new System.Drawing.Point(108, 72);
+            this.txtmodipprespag.Name = "txtmodipprespag";
+            this.txtmodipprespag.ReadOnly = true;
+            this.txtmodipprespag.Size = new System.Drawing.Size(100, 20);
+            this.txtmodipprespag.TabIndex = 7;
+            // 
+            // txtmodidcleinpag
+            // 
+            this.txtmodidcleinpag.Location = new System.Drawing.Point(108, 105);
+            this.txtmodidcleinpag.Name = "txtmodidcleinpag";
+            this.txtmodidcleinpag.Size = new System.Drawing.Size(100, 20);
+            this.txtmodidcleinpag.TabIndex = 8;
+            // 
+            // txtmodmontpag
+            // 
+            this.txtmodmontpag.Location = new System.Drawing.Point(108, 138);
+            this.txtmodmontpag.Name = "txtmodmontpag";
+            this.txtmodmontpag.Size = new System.Drawing.Size(100, 20);
+            this.txtmodmontpag.TabIndex = 9;
+            // 
+            // dgvmodpago
+            // 
+            this.dgvmodpago.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvmodpago.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvmodpago.Location = new System.Drawing.Point(6, 56);
+            this.dgvmodpago.Name = "dgvmodpago";
+            this.dgvmodpago.ReadOnly = true;
+            this.dgvmodpago.Size = new System.Drawing.Size(377, 325);
+            this.dgvmodpago.TabIndex = 0;
+            this.dgvmodpago.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvmodpago_CellContentClick);
+            // 
+            // btnmodpago
+            // 
+            this.btnmodpago.Location = new System.Drawing.Point(7, 225);
+            this.btnmodpago.Name = "btnmodpago";
+            this.btnmodpago.Size = new System.Drawing.Size(75, 23);
+            this.btnmodpago.TabIndex = 11;
+            this.btnmodpago.Text = "Modificar";
+            this.btnmodpago.UseVisualStyleBackColor = true;
+            this.btnmodpago.Click += new System.EventHandler(this.btnmodpago_Click);
+            // 
+            // btnborrarpag
+            // 
+            this.btnborrarpag.Location = new System.Drawing.Point(108, 225);
+            this.btnborrarpag.Name = "btnborrarpag";
+            this.btnborrarpag.Size = new System.Drawing.Size(75, 23);
+            this.btnborrarpag.TabIndex = 12;
+            this.btnborrarpag.Text = "Borrar";
+            this.btnborrarpag.UseVisualStyleBackColor = true;
+            this.btnborrarpag.Click += new System.EventHandler(this.btnborrarpag_Click);
+            // 
+            // dtpmodpago
+            // 
+            this.dtpmodpago.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpmodpago.Location = new System.Drawing.Point(92, 170);
+            this.dtpmodpago.Name = "dtpmodpago";
+            this.dtpmodpago.Size = new System.Drawing.Size(116, 20);
+            this.dtpmodpago.TabIndex = 13;
+            // 
+            // rbidmodpag
+            // 
+            this.rbidmodpag.AutoSize = true;
+            this.rbidmodpag.Location = new System.Drawing.Point(6, 33);
+            this.rbidmodpag.Name = "rbidmodpag";
+            this.rbidmodpag.Size = new System.Drawing.Size(36, 17);
+            this.rbidmodpag.TabIndex = 1;
+            this.rbidmodpag.TabStop = true;
+            this.rbidmodpag.Text = "ID";
+            this.rbidmodpag.UseVisualStyleBackColor = true;
+            // 
+            // rbmodnombpag
+            // 
+            this.rbmodnombpag.AutoSize = true;
+            this.rbmodnombpag.Location = new System.Drawing.Point(48, 33);
+            this.rbmodnombpag.Name = "rbmodnombpag";
+            this.rbmodnombpag.Size = new System.Drawing.Size(67, 17);
+            this.rbmodnombpag.TabIndex = 2;
+            this.rbmodnombpag.TabStop = true;
+            this.rbmodnombpag.Text = "Nombres";
+            this.rbmodnombpag.UseVisualStyleBackColor = true;
+            // 
+            // rbmodcedupag
+            // 
+            this.rbmodcedupag.AutoSize = true;
+            this.rbmodcedupag.Location = new System.Drawing.Point(121, 33);
+            this.rbmodcedupag.Name = "rbmodcedupag";
+            this.rbmodcedupag.Size = new System.Drawing.Size(58, 17);
+            this.rbmodcedupag.TabIndex = 3;
+            this.rbmodcedupag.TabStop = true;
+            this.rbmodcedupag.Text = "Cedula";
+            this.rbmodcedupag.UseVisualStyleBackColor = true;
+            // 
+            // rbuserid
+            // 
+            this.rbuserid.AutoSize = true;
+            this.rbuserid.Location = new System.Drawing.Point(7, 21);
+            this.rbuserid.Name = "rbuserid";
+            this.rbuserid.Size = new System.Drawing.Size(36, 17);
+            this.rbuserid.TabIndex = 1;
+            this.rbuserid.TabStop = true;
+            this.rbuserid.Text = "ID";
+            this.rbuserid.UseVisualStyleBackColor = true;
+            // 
+            // rbuseru
+            // 
+            this.rbuseru.AutoSize = true;
+            this.rbuseru.Location = new System.Drawing.Point(49, 21);
+            this.rbuseru.Name = "rbuseru";
+            this.rbuseru.Size = new System.Drawing.Size(47, 17);
+            this.rbuseru.TabIndex = 2;
+            this.rbuseru.TabStop = true;
+            this.rbuseru.Text = "User";
+            this.rbuseru.UseVisualStyleBackColor = true;
+            // 
+            // txtbususer
+            // 
+            this.txtbususer.Location = new System.Drawing.Point(102, 18);
+            this.txtbususer.Name = "txtbususer";
+            this.txtbususer.Size = new System.Drawing.Size(100, 20);
+            this.txtbususer.TabIndex = 3;
+            this.txtbususer.TextChanged += new System.EventHandler(this.txtbususer_TextChanged);
+            // 
+            // rbidclientmod
+            // 
+            this.rbidclientmod.AutoSize = true;
+            this.rbidclientmod.Location = new System.Drawing.Point(7, 25);
+            this.rbidclientmod.Name = "rbidclientmod";
+            this.rbidclientmod.Size = new System.Drawing.Size(36, 17);
+            this.rbidclientmod.TabIndex = 2;
+            this.rbidclientmod.TabStop = true;
+            this.rbidclientmod.Text = "ID";
+            this.rbidclientmod.UseVisualStyleBackColor = true;
+            // 
+            // rbmodnombcli
+            // 
+            this.rbmodnombcli.AutoSize = true;
+            this.rbmodnombcli.Location = new System.Drawing.Point(49, 25);
+            this.rbmodnombcli.Name = "rbmodnombcli";
+            this.rbmodnombcli.Size = new System.Drawing.Size(62, 17);
+            this.rbmodnombcli.TabIndex = 3;
+            this.rbmodnombcli.TabStop = true;
+            this.rbmodnombcli.Text = "Nombre";
+            this.rbmodnombcli.UseVisualStyleBackColor = true;
+            // 
+            // rbmodceducli
+            // 
+            this.rbmodceducli.AutoSize = true;
+            this.rbmodceducli.Location = new System.Drawing.Point(117, 25);
+            this.rbmodceducli.Name = "rbmodceducli";
+            this.rbmodceducli.Size = new System.Drawing.Size(58, 17);
+            this.rbmodceducli.TabIndex = 4;
+            this.rbmodceducli.TabStop = true;
+            this.rbmodceducli.Text = "Cedula";
+            this.rbmodceducli.UseVisualStyleBackColor = true;
+            // 
+            // txtbuscl2
+            // 
+            this.txtbuscl2.Location = new System.Drawing.Point(181, 24);
+            this.txtbuscl2.Name = "txtbuscl2";
+            this.txtbuscl2.Size = new System.Drawing.Size(117, 20);
+            this.txtbuscl2.TabIndex = 5;
+            this.txtbuscl2.TextChanged += new System.EventHandler(this.txtbuscl2_TextChanged);
+            // 
+            // txtbuspagmod
+            // 
+            this.txtbuspagmod.Location = new System.Drawing.Point(185, 32);
+            this.txtbuspagmod.Name = "txtbuspagmod";
+            this.txtbuspagmod.Size = new System.Drawing.Size(100, 20);
+            this.txtbuspagmod.TabIndex = 4;
+            this.txtbuspagmod.TextChanged += new System.EventHandler(this.txtbuspagmod_TextChanged);
             // 
             // Principal1
             // 
@@ -1763,12 +2073,15 @@
             this.tabControl5.ResumeLayout(false);
             this.tabPage11.ResumeLayout(false);
             this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvuser)).EndInit();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
             this.tabPage12.ResumeLayout(false);
             this.tabPage13.ResumeLayout(false);
+            this.tabPage14.ResumeLayout(false);
             this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvmodclient)).EndInit();
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
@@ -1777,6 +2090,11 @@
             this.groupBox11.ResumeLayout(false);
             this.groupBox11.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvmodprest)).EndInit();
+            this.groupBox12.ResumeLayout(false);
+            this.groupBox12.PerformLayout();
+            this.groupBox13.ResumeLayout(false);
+            this.groupBox13.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvmodpago)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1924,5 +2242,31 @@
         private System.Windows.Forms.TextBox txtbuspresmod;
         private System.Windows.Forms.TextBox txtidmodprestcli;
         private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.GroupBox groupBox13;
+        private System.Windows.Forms.DataGridView dgvmodpago;
+        private System.Windows.Forms.GroupBox groupBox12;
+        private System.Windows.Forms.Button btnborrarpag;
+        private System.Windows.Forms.Button btnmodpago;
+        private System.Windows.Forms.TextBox txtmodmontpag;
+        private System.Windows.Forms.TextBox txtmodidcleinpag;
+        private System.Windows.Forms.TextBox txtmodipprespag;
+        private System.Windows.Forms.TextBox txtmoidpago;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.DateTimePicker dtpmodpago;
+        private System.Windows.Forms.RadioButton rbmodcedupag;
+        private System.Windows.Forms.RadioButton rbmodnombpag;
+        private System.Windows.Forms.RadioButton rbidmodpag;
+        private System.Windows.Forms.TextBox txtbususer;
+        private System.Windows.Forms.RadioButton rbuseru;
+        private System.Windows.Forms.RadioButton rbuserid;
+        private System.Windows.Forms.RadioButton rbmodceducli;
+        private System.Windows.Forms.RadioButton rbmodnombcli;
+        private System.Windows.Forms.RadioButton rbidclientmod;
+        private System.Windows.Forms.TextBox txtbuscl2;
+        private System.Windows.Forms.TextBox txtbuspagmod;
     }
 }

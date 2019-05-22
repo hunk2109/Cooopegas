@@ -51,6 +51,7 @@ namespace Coopegas1._0
             dgvuser.DataSource = oper.cosnsultaconresultado("select * from usuario");
             dgvmodclient.DataSource = oper.cosnsultaconresultado("select idclient as ID, nombres as Nombres, apellidos as Apellidos, direccion as Direccion,tel as Telefono,cedula as Cedula from cliente");
             dgvmodprest.DataSource = oper.cosnsultaconresultado("select iddesemb as ID,cliente_idclient as IDC,nombres as Nombres,apellidos as Apellidos, cedula as Cedula,interes as Interes,monto ,monto*(interes/100.00) as Cargo ,monto*(interes/100.00)+monto as Monto,fecha as Fecha, tiempo as Meses, (monto*(interes/100.00)+monto)/tiempo as Cuotas from desembolso  inner join cliente on   idclient = cliente_idclient");
+            dgvmodpago.DataSource = oper.cosnsultaconresultado("select nombres as Nombres,apellidos as Apellidos, idpago as ID,cliente_idclient as IDC,desembolso_iddesemb as IDP,monto_pag as Pago,cedula as Cedula,fecha as Fecha from pago inner join cliente on idclient = cliente_idclient");
 
 
 
@@ -614,10 +615,141 @@ namespace Coopegas1._0
             DialogResult result = MessageBox.Show("Seguro que desea Modificar?", "Modificar", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
-                oper.consultasinreaultado("update ");
+                oper.consultasinreaultado("update desembolsa set iddesmb = '"+txtidmodprest.Text+"',monto = '"+txtmodmont.Text+"',fecha ='"+dtpmodfechprest.Text+"',interes'"+txtmodintprest.Text+"', tiempo = '"+cmbmodtiemp.Text+ "',cliente_idclient ='"+txtidmodprestcli.Text+"'");
+                MessageBox.Show("Datos Actualizados");
+                dgvmodprest.DataSource = oper.cosnsultaconresultado("select iddesemb as ID,cliente_idclient as IDC,nombres as Nombres,apellidos as Apellidos, cedula as Cedula,interes as Interes,monto ,monto*(interes/100.00) as Cargo ,monto*(interes/100.00)+monto as Monto,fecha as Fecha, tiempo as Meses, (monto*(interes/100.00)+monto)/tiempo as Cuotas from desembolso  inner join cliente on   idclient = cliente_idclient");
+                txtidmodprest.Clear();
+                txtidmodprestcli.Clear();
+                txtmodmont.Clear();
+                txtmodintprest.Clear();
+
 
             }
 
+        }
+
+        private void tabPage13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtborrprest_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Seguro que desea Borrar?", "Borrar", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                oper.consultasinreaultado("delete from desembolso where iddesemb = '"+txtidmodprest.Text+"'");
+                MessageBox.Show("Datos Borrados");
+                dgvmodprest.DataSource = oper.cosnsultaconresultado("select iddesemb as ID,cliente_idclient as IDC,nombres as Nombres,apellidos as Apellidos, cedula as Cedula,interes as Interes,monto ,monto*(interes/100.00) as Cargo ,monto*(interes/100.00)+monto as Monto,fecha as Fecha, tiempo as Meses, (monto*(interes/100.00)+monto)/tiempo as Cuotas from desembolso  inner join cliente on   idclient = cliente_idclient");
+                txtidmodprest.Clear();
+                txtidmodprestcli.Clear();
+                txtmodmont.Clear();
+                txtmodintprest.Clear();
+
+            }
+
+        }
+
+        private void dgvmodpago_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow act = dgvmodpago.Rows[e.RowIndex];
+            txtmoidpago.Text  = act.Cells["ID"].Value.ToString();
+            txtmodmontpag.Text = act.Cells["Pago"].Value.ToString();
+            dtpmodpago.Text = act.Cells["Fecha"].Value.ToString();
+            txtmodipprespag.Text = act.Cells["IDP"].Value.ToString();
+            txtmodidcleinpag.Text = act.Cells["IDC"].Value.ToString();
+
+        }
+
+        private void btnmodpago_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Seguro que desea Modificar?", "Modificar", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                oper.consultasinreaultado("update pago set idpago = '"+txtmoidpago.Text+"',monto_pag ='"+txtmodmontpag.Text+"',fecha ='"+dtpmodpago.Text+ "',cliente_idclient ='"+txtmodidcleinpag.Text+ "',desembolso_iddesemb = '"+txtmodipprespag.Text+ "' where idpago = '"+txtmoidpago.Text+"'");
+                MessageBox.Show("Datos Actualizados");
+                dgvmodpago.DataSource = oper.cosnsultaconresultado("select nombres as Nombres,apellidos as Apellidos, idpago as ID,cliente_idclient as IDC,desembolso_iddesemb as IDP,monto_pag as Pago,cedula as Cedula,fecha as Fecha from pago inner join cliente on idclient = cliente_idclient");
+                txtmoidpago.Clear();
+                txtmodmontpag.Clear();
+                txtmodidcleinpag.Clear();
+                txtmodipprespag.Clear();
+
+            }
+        }
+
+        private void btnborrarpag_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Seguro que desea Borrar?", "Borrar", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                oper.consultasinreaultado("delete from pago where idpago ='" + txtmoidpago.Text + "'");
+                MessageBox.Show("Datos Borrados");
+                dgvmodpago.DataSource = oper.cosnsultaconresultado("select nombres as Nombres,apellidos as Apellidos, idpago as ID,cliente_idclient as IDC,desembolso_iddesemb as IDP,monto_pag as Pago,cedula as Cedula,fecha as Fecha from pago inner join cliente on idclient = cliente_idclient");
+                txtmoidpago.Clear();
+                txtmodmontpag.Clear();
+                txtmodidcleinpag.Clear();
+                txtmodipprespag.Clear();
+            }
+
+            }
+
+        private void txtbususer_TextChanged(object sender, EventArgs e)
+        {
+            if (rbuserid.Checked == true)
+            {
+                dgvuser.DataSource = oper.cosnsultaconresultado("select * from usuario where iduser ='"+txtbususer.Text+"'");
+            }
+
+
+            else if (rbuseru.Checked == true)
+            {
+                dgvuser.DataSource = oper.cosnsultaconresultado("select * from usuario where user like '%" + txtbususer.Text + "%'");
+
+            }
+        }
+
+        private void txtbuscl2_TextChanged(object sender, EventArgs e)
+        {
+            if (rbidclientmod.Checked == true)
+            {
+                dgvmodclient.DataSource = oper.cosnsultaconresultado("select idclient as ID, nombres as Nombres, apellidos as Apellidos, direccion as Direccion,tel as Telefono,cedula as Cedula from cliente where ID = '"+txtbuscl2.Text+"'");
+
+            }
+
+            else if(rbmodnombcli.Checked == true)
+            {
+                dgvmodclient.DataSource = oper.cosnsultaconresultado("select idclient as ID, nombres as Nombres, apellidos as Apellidos, direccion as Direccion,tel as Telefono,cedula as Cedula from cliente where Nombres like '%" + txtbuscl2.Text + "%'");
+
+            }
+
+
+            else if(rbmodceducli.Checked == true)
+            {
+                dgvmodclient.DataSource = oper.cosnsultaconresultado("select idclient as ID, nombres as Nombres, apellidos as Apellidos, direccion as Direccion,tel as Telefono,cedula as Cedula from cliente where Cedula like '%" + txtbuscl2.Text + "%'");
+
+            }
+        }
+
+        private void txtbuspagmod_TextChanged(object sender, EventArgs e)
+        {
+            if (rbidmodpag.Checked == true)
+            {
+                dgvmodpago.DataSource = oper.cosnsultaconresultado("select nombres as Nombres,apellidos as Apellidos, idpago as ID,cliente_idclient as IDC,desembolso_iddesemb as IDP,monto_pag as Pago,cedula as Cedula,fecha as Fecha from pago inner join cliente on idclient = cliente_idclient where ID ='"+txtbuspagmod.Text+"'");
+
+            }
+
+
+            else if (rbmodnombpag.Checked == true)
+            {
+                dgvmodpago.DataSource = oper.cosnsultaconresultado("select nombres as Nombres,apellidos as Apellidos, idpago as ID,cliente_idclient as IDC,desembolso_iddesemb as IDP,monto_pag as Pago,cedula as Cedula,fecha as Fecha from pago inner join cliente on idclient = cliente_idclient where Nombres like '%" + txtbuspagmod.Text + "%'");
+
+            }
+
+            else if(rbmodcedupag.Checked == true)
+            {
+                dgvmodpago.DataSource = oper.cosnsultaconresultado("select nombres as Nombres,apellidos as Apellidos, idpago as ID,cliente_idclient as IDC,desembolso_iddesemb as IDP,monto_pag as Pago,cedula as Cedula,fecha as Fecha from pago inner join cliente on idclient = cliente_idclient where Cedula ='%" + txtbuspagmod.Text + "%'");
+
+            }
         }
     }
 }
