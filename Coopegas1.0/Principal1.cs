@@ -42,7 +42,8 @@ namespace Coopegas1._0
             dgvverclientprest.DataSource = oper.cosnsultaconresultado("select * from cliente");
             dgvvprest.DataSource = oper.cosnsultaconresultado("select iddesemb as ID,nombres as Nombres,apellidos as Apellidos, cedula as Cedula,interes as Interes,monto*(interes/100.00) as Cargo ,monto*(interes/100.00)+monto as Monto,fecha as Fecha, tiempo as Meses, (monto*(interes/100.00)+monto)/tiempo as Cuotas from desembolso  inner join cliente on   idclient = cliente_idclient");
             dgvprestpag.DataSource = oper.cosnsultaconresultado("select idclient as Indentificacion,iddesemb as ID,nombres as Nombres,apellidos as Apellidos, cedula as Cedula,interes as Interes,monto*(interes/100.00) as Cargo ,monto*(interes/100.0)+monto as Monto,fecha as Fecha, tiempo as Meses, (monto*(interes/100.0)+monto)/tiempo as Cuotas from desembolso  inner join cliente on   idclient = cliente_idclient");
-            dgvpagos.DataSource = oper.cosnsultaconresultado("select nombres,apellidos, idpago,monto_pag,cedula from pago inner join cliente on idclient = cliente_idclient");
+            dgvpagos.DataSource = oper.cosnsultaconresultado("select nombres as Nombres,apellidos as Apellidos, idpago as ID,monto_pag as Pago,cedula as Cedula from pago inner join cliente on idclient = cliente_idclient");
+            dgvuser.DataSource = oper.cosnsultaconresultado("select * from usuario");
 
 
 
@@ -74,7 +75,7 @@ namespace Coopegas1._0
             dgvverclientprest.DataSource = oper.cosnsultaconresultado("select * from cliente");
             dgvvprest.DataSource = oper.cosnsultaconresultado("select iddesemb as ID,nombres as Nombres,apellidos as Apellidos, cedula as Cedula,interes as Interes,monto*(interes/100.00) as Cargo ,monto*(interes/100.00)+monto as Monto,fecha as Fecha, tiempo as Meses, (monto*(interes/100.00)+monto)/tiempo as Cuotas from desembolso  inner join cliente on   idclient = cliente_idclient");
             dgvprestpag.DataSource = oper.cosnsultaconresultado("select idclient as Indentificacion,iddesemb as ID,nombres as Nombres,apellidos as Apellidos, cedula as Cedula,interes as Interes,monto*(interes/100.00) as Cargo ,monto*(interes/100.0)+monto as Monto,fecha as Fecha, tiempo as Meses, (monto*(interes/100.0)+monto)/tiempo as Cuotas from desembolso  inner join cliente on   idclient = cliente_idclient");
-            dgvpagos.DataSource = oper.cosnsultaconresultado("select nombres,apellidos, idpago,monto_pag,cedula from pago inner join cliente on idclient = cliente_idclient");
+            dgvpagos.DataSource = oper.cosnsultaconresultado("select nombres as Nombres,apellidos as Apellidos, idpago as ID,monto_pag as Pago,cedula as Cedula from pago inner join cliente on idclient = cliente_idclient");
 
 
         }
@@ -199,7 +200,140 @@ namespace Coopegas1._0
 
         private void btnimprpago_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txtimppago.Text))
+            {
+                DataSet ds = new DataSet();
+                DataTable dt = oper.cosnsultaconresultado("select nombres,apellidos, idpago,monto_pag,cedula from pago inner join cliente on idclient = cliente_idclient");
+                ds.Tables.Add(dt);
+                ds.WriteXml(@"C:\factura\Pagos.xml");
+                visorpagos f = new visorpagos();
+                f.Show();
+            }
+
+            else
+            {
+                DataSet ds = new DataSet();
+                DataTable dt = oper.cosnsultaconresultado("select nombres,apellidos, idpago,monto_pag ,cedula from pago inner join cliente on idclient = cliente_idclient where idpago ='"+txtimppago.Text+"'");
+                ds.Tables.Add(dt);
+                ds.WriteXml(@"C:\factura\Pagos.xml");
+                visorpagos f = new visorpagos();
+                f.Show();
+
+            }
 
         }
+
+        private void dgvpagos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow act = dgvpagos.Rows[e.RowIndex];
+            txtimppago.Text = act.Cells["ID"].Value.ToString();
+
+        }
+
+        private void dgvuser_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow act = dgvuser.Rows[e.RowIndex];
+            txtiduser.Text = act.Cells["iduser"].Value.ToString();
+            txtuser.Text = act.Cells["user"].Value.ToString();
+            txtpass.Text = act.Cells["pass"].Value.ToString();
+
+        }
+
+        private void btnmoduser_Click(object sender, EventArgs e)
+        {
+            if (rbadmin.Checked == true)
+            {
+                DialogResult result = MessageBox.Show("Seguro que desea Modificar?", "Modificar", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    oper.cosnsultaconresultado("update usuario set user = '" + txtuser.Text + "',pass = '" + txtpass.Text + "',tipo_user ='1' where iduser = '" + txtiduser.Text + "'");
+                    txtiduser.Clear();
+                    txtuser.Clear();
+                    txtpass.Clear();
+                    MessageBox.Show("Datos Actualizados");
+                    dgvuser.DataSource = oper.cosnsultaconresultado("select * from usuario");
+
+                }
+
+            }
+
+            else if (rbadmin.Checked == true)
+            {
+                DialogResult result = MessageBox.Show("Seguro que desea Modificar?", "Modificar", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    oper.cosnsultaconresultado("update usuario set user = '" + txtuser.Text + "',pass = '" + txtpass.Text + "',tipo_user = '2' where iduser = '" + txtiduser.Text + "'");
+                    txtiduser.Clear();
+                    txtuser.Clear();
+                    txtpass.Clear();
+                    MessageBox.Show("Datos Actualizados");
+                    dgvuser.DataSource = oper.cosnsultaconresultado("select * from usuario");
+                }
+
+            }
+
+            else
+            {
+                MessageBox.Show("Seleccione un nivel de Usuario!");
+            }
+
+
+            }
+
+        private void btnborraruser_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Seguro que desea Borrar?", "Borrar", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                oper.consultasinreaultado("delete from usuario where iduser = '" + txtiduser.Text + "'");
+                txtiduser.Clear();
+                txtuser.Clear();
+                txtpass.Clear();
+                MessageBox.Show("Datos Borrados!");
+                dgvuser.DataSource = oper.cosnsultaconresultado("select * from usuario");
+
+            }
+        }
+
+        private void btnnueuser_Click(object sender, EventArgs e)
+        {
+            if (rbadmin.Checked == true)
+            {
+                oper.consultasinreaultado("insert into usuario(user,pass,tipo_user)values('" + txtuser.Text + "','" + txtpass.Text + "','1')");
+                dgvuser.DataSource = oper.cosnsultaconresultado("select * from usuario");
+            }
+
+            else if (rbuser.Checked == true)
+            {
+                oper.consultasinreaultado("insert into usuario(user,pass,tipo_user)values('" + txtuser.Text + "','" + txtpass.Text + "','2')");
+                dgvuser.DataSource = oper.cosnsultaconresultado("select * from usuario");
+            }
+
+            else
+            {
+                MessageBox.Show("Seleccione un nivel de Usuario!");
+            }
+        }
+
+
+        private bool isAdmin;
+
+        public bool IsAdmin
+        {
+            get
+            {
+                return isAdmin;
+            }
+
+            set
+            {
+                isAdmin = value;
+                tabControl5.Visible = isAdmin;
+                
+                
+            }
+        }
     }
-}
+    }
+
+

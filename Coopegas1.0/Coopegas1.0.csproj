@@ -75,6 +75,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="impripagos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>impripagos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="impriprest.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -96,8 +102,18 @@
     <Compile Include="Visor.Designer.cs">
       <DependentUpon>Visor.cs</DependentUpon>
     </Compile>
+    <Compile Include="visorpagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="visorpagos.Designer.cs">
+      <DependentUpon>visorpagos.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="impripagos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>impripagos.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="impriprest.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -117,6 +133,9 @@
     </Compile>
     <EmbeddedResource Include="Visor.resx">
       <DependentUpon>Visor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="visorpagos.resx">
+      <DependentUpon>visorpagos.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="packages.config" />

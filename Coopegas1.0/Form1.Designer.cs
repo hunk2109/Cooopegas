@@ -34,6 +34,7 @@
             this.txtpass = new System.Windows.Forms.TextBox();
             this.btnentrar = new System.Windows.Forms.Button();
             this.btnlimpiar = new System.Windows.Forms.Button();
+            this.cmbadmin = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -71,7 +72,7 @@
             // 
             // btnentrar
             // 
-            this.btnentrar.Location = new System.Drawing.Point(103, 111);
+            this.btnentrar.Location = new System.Drawing.Point(95, 149);
             this.btnentrar.Name = "btnentrar";
             this.btnentrar.Size = new System.Drawing.Size(75, 23);
             this.btnentrar.TabIndex = 4;
@@ -81,18 +82,30 @@
             // 
             // btnlimpiar
             // 
-            this.btnlimpiar.Location = new System.Drawing.Point(184, 111);
+            this.btnlimpiar.Location = new System.Drawing.Point(184, 149);
             this.btnlimpiar.Name = "btnlimpiar";
             this.btnlimpiar.Size = new System.Drawing.Size(75, 23);
             this.btnlimpiar.TabIndex = 5;
             this.btnlimpiar.Text = "Limpiar";
             this.btnlimpiar.UseVisualStyleBackColor = true;
             // 
+            // cmbadmin
+            // 
+            this.cmbadmin.FormattingEnabled = true;
+            this.cmbadmin.Items.AddRange(new object[] {
+            "Administrador",
+            "Usuario"});
+            this.cmbadmin.Location = new System.Drawing.Point(95, 104);
+            this.cmbadmin.Name = "cmbadmin";
+            this.cmbadmin.Size = new System.Drawing.Size(164, 21);
+            this.cmbadmin.TabIndex = 6;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(326, 146);
+            this.ClientSize = new System.Drawing.Size(326, 204);
+            this.Controls.Add(this.cmbadmin);
             this.Controls.Add(this.btnlimpiar);
             this.Controls.Add(this.btnentrar);
             this.Controls.Add(this.txtpass);
@@ -114,6 +127,7 @@
         private System.Windows.Forms.TextBox txtpass;
         private System.Windows.Forms.Button btnentrar;
         private System.Windows.Forms.Button btnlimpiar;
+        private System.Windows.Forms.ComboBox cmbadmin;
     }
 }
 

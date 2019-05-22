@@ -90,7 +90,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.dtppagfec = new System.Windows.Forms.DateTimePicker();
             this.dgvpagos = new System.Windows.Forms.DataGridView();
-            this.tabPage10 = new System.Windows.Forms.TabPage();
+            this.tabamin = new System.Windows.Forms.TabPage();
             this.tabControl5 = new System.Windows.Forms.TabControl();
             this.tabPage11 = new System.Windows.Forms.TabPage();
             this.tabPage12 = new System.Windows.Forms.TabPage();
@@ -108,6 +108,21 @@
             this.btnimpr = new System.Windows.Forms.Button();
             this.txtimpprest = new System.Windows.Forms.TextBox();
             this.btnimprpago = new System.Windows.Forms.Button();
+            this.txtimppago = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.txtuser = new System.Windows.Forms.TextBox();
+            this.txtpass = new System.Windows.Forms.TextBox();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.dgvuser = new System.Windows.Forms.DataGridView();
+            this.label17 = new System.Windows.Forms.Label();
+            this.txtiduser = new System.Windows.Forms.TextBox();
+            this.btnmoduser = new System.Windows.Forms.Button();
+            this.btnborraruser = new System.Windows.Forms.Button();
+            this.btnnueuser = new System.Windows.Forms.Button();
+            this.rbadmin = new System.Windows.Forms.RadioButton();
+            this.rbuser = new System.Windows.Forms.RadioButton();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -131,8 +146,12 @@
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvprestpag)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvpagos)).BeginInit();
-            this.tabPage10.SuspendLayout();
+            this.tabamin.SuspendLayout();
             this.tabControl5.SuspendLayout();
+            this.tabPage11.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            this.groupBox7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvuser)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -143,7 +162,7 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage10);
+            this.tabControl1.Controls.Add(this.tabamin);
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -413,6 +432,7 @@
             // 
             // tabPage9
             // 
+            this.tabPage9.Controls.Add(this.txtimppago);
             this.tabPage9.Controls.Add(this.btnimprpago);
             this.tabPage9.Controls.Add(this.txtbuscpag);
             this.tabPage9.Controls.Add(this.rbpnombr);
@@ -797,19 +817,21 @@
             this.dgvpagos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvpagos.Location = new System.Drawing.Point(7, 43);
             this.dgvpagos.Name = "dgvpagos";
+            this.dgvpagos.ReadOnly = true;
             this.dgvpagos.Size = new System.Drawing.Size(734, 277);
             this.dgvpagos.TabIndex = 0;
+            this.dgvpagos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvpagos_CellContentClick);
             // 
-            // tabPage10
+            // tabamin
             // 
-            this.tabPage10.Controls.Add(this.tabControl5);
-            this.tabPage10.Location = new System.Drawing.Point(4, 22);
-            this.tabPage10.Name = "tabPage10";
-            this.tabPage10.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage10.Size = new System.Drawing.Size(768, 400);
-            this.tabPage10.TabIndex = 3;
-            this.tabPage10.Text = "Administrador";
-            this.tabPage10.UseVisualStyleBackColor = true;
+            this.tabamin.Controls.Add(this.tabControl5);
+            this.tabamin.Location = new System.Drawing.Point(4, 22);
+            this.tabamin.Name = "tabamin";
+            this.tabamin.Padding = new System.Windows.Forms.Padding(3);
+            this.tabamin.Size = new System.Drawing.Size(768, 400);
+            this.tabamin.TabIndex = 3;
+            this.tabamin.Text = "Administrador";
+            this.tabamin.UseVisualStyleBackColor = true;
             // 
             // tabControl5
             // 
@@ -822,9 +844,12 @@
             this.tabControl5.SelectedIndex = 0;
             this.tabControl5.Size = new System.Drawing.Size(755, 377);
             this.tabControl5.TabIndex = 0;
+            this.tabControl5.Visible = false;
             // 
             // tabPage11
             // 
+            this.tabPage11.Controls.Add(this.groupBox7);
+            this.tabPage11.Controls.Add(this.groupBox6);
             this.tabPage11.Location = new System.Drawing.Point(4, 22);
             this.tabPage11.Name = "tabPage11";
             this.tabPage11.Padding = new System.Windows.Forms.Padding(3);
@@ -984,6 +1009,158 @@
             this.btnimprpago.UseVisualStyleBackColor = true;
             this.btnimprpago.Click += new System.EventHandler(this.btnimprpago_Click);
             // 
+            // txtimppago
+            // 
+            this.txtimppago.Location = new System.Drawing.Point(641, 7);
+            this.txtimppago.Name = "txtimppago";
+            this.txtimppago.ReadOnly = true;
+            this.txtimppago.Size = new System.Drawing.Size(100, 20);
+            this.txtimppago.TabIndex = 6;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(6, 69);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(43, 13);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "Usuario";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(6, 115);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(61, 13);
+            this.label16.TabIndex = 1;
+            this.label16.Text = "Contraseña";
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.rbuser);
+            this.groupBox6.Controls.Add(this.rbadmin);
+            this.groupBox6.Controls.Add(this.btnnueuser);
+            this.groupBox6.Controls.Add(this.btnborraruser);
+            this.groupBox6.Controls.Add(this.btnmoduser);
+            this.groupBox6.Controls.Add(this.txtiduser);
+            this.groupBox6.Controls.Add(this.label17);
+            this.groupBox6.Controls.Add(this.txtpass);
+            this.groupBox6.Controls.Add(this.txtuser);
+            this.groupBox6.Controls.Add(this.label15);
+            this.groupBox6.Controls.Add(this.label16);
+            this.groupBox6.Location = new System.Drawing.Point(6, 6);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(265, 245);
+            this.groupBox6.TabIndex = 2;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Usuarios";
+            // 
+            // txtuser
+            // 
+            this.txtuser.Location = new System.Drawing.Point(74, 62);
+            this.txtuser.Name = "txtuser";
+            this.txtuser.Size = new System.Drawing.Size(100, 20);
+            this.txtuser.TabIndex = 2;
+            // 
+            // txtpass
+            // 
+            this.txtpass.Location = new System.Drawing.Point(74, 108);
+            this.txtpass.Name = "txtpass";
+            this.txtpass.Size = new System.Drawing.Size(100, 20);
+            this.txtpass.TabIndex = 3;
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.dgvuser);
+            this.groupBox7.Location = new System.Drawing.Point(340, 6);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(401, 339);
+            this.groupBox7.TabIndex = 3;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Usuarios";
+            // 
+            // dgvuser
+            // 
+            this.dgvuser.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvuser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvuser.Location = new System.Drawing.Point(6, 44);
+            this.dgvuser.Name = "dgvuser";
+            this.dgvuser.ReadOnly = true;
+            this.dgvuser.Size = new System.Drawing.Size(395, 289);
+            this.dgvuser.TabIndex = 0;
+            this.dgvuser.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvuser_CellContentClick);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(6, 32);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(18, 13);
+            this.label17.TabIndex = 4;
+            this.label17.Text = "ID";
+            // 
+            // txtiduser
+            // 
+            this.txtiduser.Location = new System.Drawing.Point(74, 29);
+            this.txtiduser.Name = "txtiduser";
+            this.txtiduser.ReadOnly = true;
+            this.txtiduser.Size = new System.Drawing.Size(100, 20);
+            this.txtiduser.TabIndex = 5;
+            // 
+            // btnmoduser
+            // 
+            this.btnmoduser.Location = new System.Drawing.Point(99, 216);
+            this.btnmoduser.Name = "btnmoduser";
+            this.btnmoduser.Size = new System.Drawing.Size(75, 23);
+            this.btnmoduser.TabIndex = 6;
+            this.btnmoduser.Text = "Modificar";
+            this.btnmoduser.UseVisualStyleBackColor = true;
+            this.btnmoduser.Click += new System.EventHandler(this.btnmoduser_Click);
+            // 
+            // btnborraruser
+            // 
+            this.btnborraruser.Location = new System.Drawing.Point(184, 216);
+            this.btnborraruser.Name = "btnborraruser";
+            this.btnborraruser.Size = new System.Drawing.Size(75, 23);
+            this.btnborraruser.TabIndex = 7;
+            this.btnborraruser.Text = "Borrar";
+            this.btnborraruser.UseVisualStyleBackColor = true;
+            this.btnborraruser.Click += new System.EventHandler(this.btnborraruser_Click);
+            // 
+            // btnnueuser
+            // 
+            this.btnnueuser.Location = new System.Drawing.Point(9, 216);
+            this.btnnueuser.Name = "btnnueuser";
+            this.btnnueuser.Size = new System.Drawing.Size(75, 23);
+            this.btnnueuser.TabIndex = 8;
+            this.btnnueuser.Text = "Nuevo";
+            this.btnnueuser.UseVisualStyleBackColor = true;
+            this.btnnueuser.Click += new System.EventHandler(this.btnnueuser_Click);
+            // 
+            // rbadmin
+            // 
+            this.rbadmin.AutoSize = true;
+            this.rbadmin.Location = new System.Drawing.Point(9, 173);
+            this.rbadmin.Name = "rbadmin";
+            this.rbadmin.Size = new System.Drawing.Size(103, 17);
+            this.rbadmin.TabIndex = 9;
+            this.rbadmin.TabStop = true;
+            this.rbadmin.Text = "Es Administrador";
+            this.rbadmin.UseVisualStyleBackColor = true;
+            // 
+            // rbuser
+            // 
+            this.rbuser.AutoSize = true;
+            this.rbuser.Location = new System.Drawing.Point(118, 173);
+            this.rbuser.Name = "rbuser";
+            this.rbuser.Size = new System.Drawing.Size(73, 17);
+            this.rbuser.TabIndex = 10;
+            this.rbuser.TabStop = true;
+            this.rbuser.Text = "Es Normal";
+            this.rbuser.UseVisualStyleBackColor = true;
+            // 
             // Principal1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1022,8 +1199,13 @@
             this.groupBox5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvprestpag)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvpagos)).EndInit();
-            this.tabPage10.ResumeLayout(false);
+            this.tabamin.ResumeLayout(false);
             this.tabControl5.ResumeLayout(false);
+            this.tabPage11.ResumeLayout(false);
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvuser)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1092,7 +1274,7 @@
         private System.Windows.Forms.DateTimePicker dtppagfec;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.DataGridView dgvpagos;
-        private System.Windows.Forms.TabPage tabPage10;
+        private System.Windows.Forms.TabPage tabamin;
         private System.Windows.Forms.TabControl tabControl5;
         private System.Windows.Forms.TabPage tabPage11;
         private System.Windows.Forms.TabPage tabPage12;
@@ -1110,5 +1292,20 @@
         private System.Windows.Forms.TextBox txtimpprest;
         private System.Windows.Forms.Button btnimpr;
         private System.Windows.Forms.Button btnimprpago;
+        private System.Windows.Forms.TextBox txtimppago;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.DataGridView dgvuser;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.TextBox txtpass;
+        private System.Windows.Forms.TextBox txtuser;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox txtiduser;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Button btnborraruser;
+        private System.Windows.Forms.Button btnmoduser;
+        private System.Windows.Forms.Button btnnueuser;
+        private System.Windows.Forms.RadioButton rbuser;
+        private System.Windows.Forms.RadioButton rbadmin;
     }
 }
