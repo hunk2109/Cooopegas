@@ -36,6 +36,11 @@ namespace Coopegas1._0
                     txtpass.Clear();
 
                 }
+
+                else
+                {
+                    MessageBox.Show("Usuario o Contraseña incorrectos!");
+                }
             }
 
            
@@ -55,7 +60,12 @@ namespace Coopegas1._0
                         txtpass.Clear();
 
                     }
+
+                else
+                {
+                    MessageBox.Show("Usuario o Contraseña incorrectos!");
                 }
+            }
 
             else
             {
