@@ -107,6 +107,7 @@
             this.txtbuscprest = new System.Windows.Forms.TextBox();
             this.btnimpr = new System.Windows.Forms.Button();
             this.txtimpprest = new System.Windows.Forms.TextBox();
+            this.btnimprpago = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -412,6 +413,7 @@
             // 
             // tabPage9
             // 
+            this.tabPage9.Controls.Add(this.btnimprpago);
             this.tabPage9.Controls.Add(this.txtbuscpag);
             this.tabPage9.Controls.Add(this.rbpnombr);
             this.tabPage9.Controls.Add(this.rbfech);
@@ -642,6 +644,7 @@
             this.dgvvprest.Name = "dgvvprest";
             this.dgvvprest.Size = new System.Drawing.Size(736, 304);
             this.dgvvprest.TabIndex = 0;
+            this.dgvvprest.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvvprest_CellContentClick);
             // 
             // dtpprest
             // 
@@ -967,8 +970,19 @@
             // 
             this.txtimpprest.Location = new System.Drawing.Point(624, 7);
             this.txtimpprest.Name = "txtimpprest";
+            this.txtimpprest.ReadOnly = true;
             this.txtimpprest.Size = new System.Drawing.Size(100, 20);
             this.txtimpprest.TabIndex = 8;
+            // 
+            // btnimprpago
+            // 
+            this.btnimprpago.Location = new System.Drawing.Point(7, 335);
+            this.btnimprpago.Name = "btnimprpago";
+            this.btnimprpago.Size = new System.Drawing.Size(75, 23);
+            this.btnimprpago.TabIndex = 5;
+            this.btnimprpago.Text = "Imprimir";
+            this.btnimprpago.UseVisualStyleBackColor = true;
+            this.btnimprpago.Click += new System.EventHandler(this.btnimprpago_Click);
             // 
             // Principal1
             // 
@@ -1095,5 +1109,6 @@
         private System.Windows.Forms.RadioButton rbbpid;
         private System.Windows.Forms.TextBox txtimpprest;
         private System.Windows.Forms.Button btnimpr;
+        private System.Windows.Forms.Button btnimprpago;
     }
 }

@@ -170,12 +170,35 @@ namespace Coopegas1._0
 
         private void btnimpr_Click_1(object sender, EventArgs e)
         {
-            DataSet ds = new DataSet();
-            DataTable dt = oper.cosnsultaconresultado("select iddesemb as ID,nombres as Nombres,apellidos as Apellidos, cedula as Cedula,interes as Interes,monto*(interes/100.00) as Cargo ,monto*(interes/100.00)+monto as Monto,fecha as Fecha, tiempo as Meses, (monto*(interes/100.00)+monto)/tiempo as Cuotas from desembolso  inner join cliente on   idclient = cliente_idclient");
-            ds.Tables.Add(dt);
-            ds.WriteXml(@"C:\factura\Prestamos.xml");
-            Visor f = new Visor();
-            f.Show();
+            if (string.IsNullOrEmpty(txtimpprest.Text))
+            {
+                DataSet ds = new DataSet();
+                DataTable dt = oper.cosnsultaconresultado("select iddesemb as ID,nombres as Nombres,apellidos as Apellidos, cedula as Cedula,interes as Interes,monto*(interes/100.00) as Cargo ,monto*(interes/100.00)+monto as Monto,fecha as Fecha, tiempo as Meses, (monto*(interes/100.00)+monto)/tiempo as Cuotas from desembolso  inner join cliente on   idclient = cliente_idclient");
+                ds.Tables.Add(dt);
+                ds.WriteXml(@"C:\factura\Prestamos.xml");
+                Visor f = new Visor();
+                f.Show();
+            }
+
+            else
+            {
+                DataSet ds = new DataSet();
+                DataTable dt = oper.cosnsultaconresultado("select iddesemb as ID,nombres as Nombres,apellidos as Apellidos, cedula as Cedula,interes as Interes,monto*(interes/100.00) as Cargo ,monto*(interes/100.00)+monto as Monto,fecha as Fecha, tiempo as Meses, (monto*(interes/100.00)+monto)/tiempo as Cuotas from desembolso  inner join cliente on   idclient = cliente_idclient where ID = '"+txtimpprest.Text+"'");
+                ds.Tables.Add(dt);
+                ds.WriteXml(@"C:\factura\Prestamos.xml");
+                Visor f = new Visor();
+                f.Show();
+            }
+        }
+
+        private void dgvvprest_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow act = dgvvprest.Rows[e.RowIndex];
+            txtimpprest.Text = act.Cells["ID"].Value.ToString();
+        }
+
+        private void btnimprpago_Click(object sender, EventArgs e)
+        {
 
         }
     }
