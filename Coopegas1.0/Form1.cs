@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Data.SQLite;
+using System.IO;
 
 namespace Coopegas1._0
 {
@@ -71,6 +72,14 @@ namespace Coopegas1._0
             {
                 MessageBox.Show("Usuario o Contraseña incorrectos!");
             }
+
+        }
+
+        private void btnlimpiar_Click(object sender, EventArgs e)
+        {
+            txtuser.Clear();
+            txtpass.Clear();
+
 
         }
     }

@@ -8,18 +8,21 @@ using System.Text;
 using System.Windows.Forms;
 using System.Data.SQLite;
 using System.Text.RegularExpressions;
+using System.IO;
 
 namespace Coopegas1._0
 {
     public partial class Principal1 : Form
     {
         operaciones oper = new operaciones();
+        DateTime fecha = new DateTime();
 
         public Principal1()
         {
             InitializeComponent();
         }
 
+        
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -52,14 +55,26 @@ namespace Coopegas1._0
             dgvmodclient.DataSource = oper.cosnsultaconresultado("select idclient as ID, nombres as Nombres, apellidos as Apellidos, direccion as Direccion,tel as Telefono,cedula as Cedula from cliente");
             dgvmodprest.DataSource = oper.cosnsultaconresultado("select iddesemb as ID,cliente_idclient as IDC,nombres as Nombres,apellidos as Apellidos, cedula as Cedula,interes as Interes,monto ,monto*(interes/100.00) as Cargo ,monto*(interes/100.00)+monto as Monto,fecha as Fecha, tiempo as Meses, (monto*(interes/100.00)+monto)/tiempo as Cuotas from desembolso  inner join cliente on   idclient = cliente_idclient");
             dgvmodpago.DataSource = oper.cosnsultaconresultado("select nombres as Nombres,apellidos as Apellidos, idpago as ID,cliente_idclient as IDC,desembolso_iddesemb as IDP,monto_pag as Pago,cedula as Cedula,fecha as Fecha from pago inner join cliente on idclient = cliente_idclient");
+            dgvprestamor.DataSource = oper.cosnsultaconresultado("select id_presta as ID, nombres as Nombres,apellidos as Apellido,cedula as Cedula, montop as Monto,interesp as Interes,tiempop as Tiempo, fechap as Fecha  from prestamo inner join cliente on cli_idclient = idclient");
+
             txtint.Text = "0";
+            if (!Directory.Exists(Path.GetDirectoryName(@"C:\factura\")))
+            {
+                Directory.CreateDirectory(Path.GetDirectoryName(@"C:\factura\"));
 
 
-        }
+
+            }
+
+
+
+
+
+            }
 
         private void btnguardpres_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtimppago.Text))
+            if (string.IsNullOrEmpty(txtidcleintp.Text))
             {
                 MessageBox.Show("Seleccione un Cliente");
             }
@@ -204,7 +219,7 @@ namespace Coopegas1._0
                 DataSet ds = new DataSet();
                 DataTable dt = oper.cosnsultaconresultado("select iddesemb as ID,nombres as Nombres,apellidos as Apellidos, cedula as Cedula,interes as Interes,monto*(interes/100.00) as Cargo ,monto*(interes/100.00)+monto as Monto,fecha as Fecha, tiempo as Meses, (monto*(interes/100.00)+monto)/tiempo as Cuotas from desembolso  inner join cliente on   idclient = cliente_idclient");
                 ds.Tables.Add(dt);
-                ds.WriteXml(@"C:\Program Files\hunk2109\COOPEGASI1.0\factura\Prestamos.xml");
+                ds.WriteXml(@"C:\factura\Prestamos.xml");
                 Visor f = new Visor();
                 f.Show();
             }
@@ -214,7 +229,7 @@ namespace Coopegas1._0
                 DataSet ds = new DataSet();
                 DataTable dt = oper.cosnsultaconresultado("select iddesemb as ID,nombres as Nombres,apellidos as Apellidos, cedula as Cedula,interes as Interes,monto*(interes/100.00) as Cargo ,monto*(interes/100.00)+monto as Monto,fecha as Fecha, tiempo as Meses, (monto*(interes/100.00)+monto)/tiempo as Cuotas from desembolso  inner join cliente on   idclient = cliente_idclient where ID = '" + txtimpprest.Text + "'");
                 ds.Tables.Add(dt);
-                ds.WriteXml(@"C:\Program Files\hunk2109\COOPEGASI1.0\factura\Prestamos.xml");
+                ds.WriteXml(@"C:\factura\Prestamos.xml");
                 Visor f = new Visor();
                 f.Show();
             }
@@ -233,7 +248,7 @@ namespace Coopegas1._0
                 DataSet ds = new DataSet();
                 DataTable dt = oper.cosnsultaconresultado("select nombres,apellidos, idpago,monto_pag,cedula from pago inner join cliente on idclient = cliente_idclient");
                 ds.Tables.Add(dt);
-                ds.WriteXml(@"C:\Program Files\hunk2109\COOPEGASI1.0\factura\Pagos.xml");
+                ds.WriteXml(@"C:\factura\Pagos.xml");
                 visorpagos f = new visorpagos();
                 f.Show();
             }
@@ -243,7 +258,7 @@ namespace Coopegas1._0
                 DataSet ds = new DataSet();
                 DataTable dt = oper.cosnsultaconresultado("select nombres,apellidos, idpago,monto_pag ,cedula from pago inner join cliente on idclient = cliente_idclient where idpago ='" + txtimppago.Text + "'");
                 ds.Tables.Add(dt);
-                ds.WriteXml(@"C:\Program Files\hunk2109\COOPEGASI1.0\factura\Pagos.xml");
+                ds.WriteXml(@"C:\factura\Pagos.xml");
                 visorpagos f = new visorpagos();
                 f.Show();
 
@@ -421,7 +436,7 @@ namespace Coopegas1._0
                 DataSet ds = new DataSet();
                 DataTable dt = oper.cosnsultaconresultado("select idclient as ID, nombres as Nombres, apellidos as Apellidos, direccion as Direccion,tel as Telefono,cedula as Cedula from cliente");
                 ds.Tables.Add(dt);
-                ds.WriteXml(@"C:\Program Files\hunk2109\COOPEGASI1.0\factura\Clientes.xml");
+                ds.WriteXml(@"C:\factura\Clientes.xml");
                 var f = new visorcliet();
                 f.Show();
             }
@@ -541,7 +556,7 @@ namespace Coopegas1._0
 
         public static string _Formatid(object idvalue)
         {
-            string returnPhone = "Format Err#";
+            string returnPhone = "";
 
             Int64 idDigits;
             string idNumber = idvalue.ToString();
@@ -768,6 +783,84 @@ namespace Coopegas1._0
         private void btnver_Click(object sender, EventArgs e)
         {
             dgvingre.DataSource = oper.cosnsultaconresultado("select sum (monto_pag) as Ingresos from pago  where fecha >= '"+dtpfec1.Text+"' and '"+dtpfec2.Text+"'");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            dgvamor.Rows.Clear();
+        }
+
+
+        private void calcular()
+        {
+            double amormont = Convert.ToDouble(this.txtmontamorti.Text);
+            Int32 meses = Convert.ToInt32(this.txtmesesamor.Text);
+            double inte = Convert.ToDouble(this.txtintamor.Text);
+            inte = inte / 100 / 12;
+
+            double resultado = (1 - Math.Pow(1 + inte, meses * -1)) / inte;
+            double cuota = amormont / resultado;
+            this.txtcuota.Text = cuota.ToString();
+            double interes = 0;
+            double tinte = 0;
+            double capital = 0;
+            double tamorti = 0;
+            double tcuota = 0;
+            double saldoin = 0;
+            double acomu = 0;
+            double saldofi = amormont;
+
+            for (int i = 1; i < meses + 1; i = i + 1)
+            {
+                interes = Math.Round(saldofi * inte, 2);
+                tinte += interes;
+                acomu += interes;
+                saldoin = saldofi;
+                capital = Math.Round(cuota - inte);
+                tamorti += capital;
+                saldofi -= capital;
+                tcuota += capital;
+                DateTime ffinal;
+                ffinal = Convert.ToDateTime(this.dtpamor.Value.ToString());
+                fecha = DateTime.Parse(ffinal.ToString());
+                fecha.AddMonths(i - 1).ToShortDateString();
+
+                dgvamor.Rows.Add(i.ToString(), fecha.AddMonths(i - 1).ToShortDateString(), saldoin.ToString(),cuota,interes,saldofi,acomu);
+            }
+            
+        }
+
+        private void textBox1_TextChanged_4(object sender, EventArgs e)
+        {
+            if (rbidamorpres.Checked == true)
+            {
+                dgvprestamor.DataSource = oper.cosnsultaconresultado("select id_presta as ID, nombres as Nombres,apellidos as Apellido,cedula as Cedula, montop as Monto,interesp as Interes,tiempop as Tiempo, fechap as Fecha  from prestamo inner join cliente on cli_idclient = idclient where ID ='"+txtbuspresamor.Text+"'");
+
+            }
+
+            else if(rbnomamor.Checked==true)
+            {
+                dgvprestamor.DataSource = oper.cosnsultaconresultado("select id_presta as ID, nombres as Nombres,apellidos as Apellido,cedula as Cedula, montop as Monto,interesp as Interes,tiempop as Tiempo, fechap as Fecha  from prestamo inner join cliente on cli_idclient = idclient where Nombres like '%" + txtbuspresamor.Text + "%'");
+
+
+            }
+
+            else if (rbfecamor.Checked == true)
+            {
+                dgvprestamor.DataSource = oper.cosnsultaconresultado("select id_presta as ID, nombres as Nombres,apellidos as Apellido,cedula as Cedula, montop as Monto,interesp as Interes,tiempop as Tiempo, fechap as Fecha  from prestamo inner join cliente on cli_idclient = idclient where Fecha like '%" + txtbuspresamor.Text + "%'");
+
+            }
+
+            else if (rbceduamor.Checked)
+            {
+                dgvprestamor.DataSource = oper.cosnsultaconresultado("select id_presta as ID, nombres as Nombres,apellidos as Apellido,cedula as Cedula, montop as Monto,interesp as Interes,tiempop as Tiempo, fechap as Fecha  from prestamo inner join cliente on cli_idclient = idclient where Cedula like '%" + txtbuspresamor.Text + "%'");
+
+            }
+        }
+
+        private void dgvprestamor_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
