@@ -153,12 +153,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_5BC194228E7F48969D809F5D224EE8E7"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_5E19FE130AA6D613425FEFD60959335F"
         "OwnerKey" = "8:_1419E1561F344F5786D16F4EC5CDEE94"
         "MsmSig" = "8:_UNDEFINED"
@@ -185,6 +179,12 @@
         {
         "MsmKey" = "8:_5FDE1FF418ECC446C60294394E620632"
         "OwnerKey" = "8:_FCD3A211B406AEE6A71F53B344B35AB4"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_64E212AF40DD4B9C9352084CD0B566B0"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -1023,26 +1023,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5BC194228E7F48969D809F5D224EE8E7"
-            {
-            "SourcePath" = "8:C:\\bdd\\coopegas.s3db"
-            "TargetName" = "8:coopegas.s3db"
-            "Tag" = "8:"
-            "Folder" = "8:_3E36E917731749828E97CDAC34E3EB80"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_5E19FE130AA6D613425FEFD60959335F"
             {
             "AssemblyRegister" = "3:1"
@@ -1103,6 +1083,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_64E212AF40DD4B9C9352084CD0B566B0"
+            {
+            "SourcePath" = "8:C:\\Artificial Academy 2\\bdd\\coopegas.s3db"
+            "TargetName" = "8:coopegas.s3db"
+            "Tag" = "8:"
+            "Folder" = "8:_526D970464CD48D9BFDF83436923A721"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_69594F30893FE761D161AD4A8307DFA4"
@@ -1627,30 +1627,6 @@
         }
         "Folder"
         {
-            "{994432C3-9487-495D-8656-3E829A8DBDDE}:_13A20E5FF6434A0AB56AC2FDC84618DB"
-            {
-            "DefaultLocation" = "8:[TARGETDIR]"
-            "Name" = "8:factura"
-            "AlwaysCreate" = "11:TRUE"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Property" = "8:NEWPROPERTY1"
-                "Folders"
-                {
-                }
-            }
-            "{994432C3-9487-495D-8656-3E829A8DBDDE}:_3E36E917731749828E97CDAC34E3EB80"
-            {
-            "DefaultLocation" = "8:[TARGETDIR]"
-            "Name" = "8:bdd"
-            "AlwaysCreate" = "11:TRUE"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Property" = "8:NEWPROPERTY2"
-                "Folders"
-                {
-                }
-            }
             "{1525181F-901A-416C-8A58-119130FE478E}:_C963347F6CAE4A4C96D93CAEFC282EBB"
             {
             "Name" = "8:#1919"
@@ -1683,6 +1659,17 @@
                         {
                         }
                     }
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_526D970464CD48D9BFDF83436923A721"
+                    {
+                    "Name" = "8:bdd"
+                    "AlwaysCreate" = "11:TRUE"
+                    "Condition" = "8:"
+                    "Transitive" = "11:FALSE"
+                    "Property" = "8:_62C6E0F87E5A400CA0E2619B5196AA63"
+                        "Folders"
+                        {
+                        }
+                    }
                     "{9EF0B969-E518-4E46-987F-47570745A589}:_72C22A9723C842609584DBC42C30029C"
                     {
                     "Name" = "8:X86"
@@ -1690,6 +1677,17 @@
                     "Condition" = "8:"
                     "Transitive" = "11:FALSE"
                     "Property" = "8:_A294E9CA47E1418183F1B8BB43DF8510"
+                        "Folders"
+                        {
+                        }
+                    }
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_EEA32F7347AE42CBB3E582B54D271CCF"
+                    {
+                    "Name" = "8:factura"
+                    "AlwaysCreate" = "11:TRUE"
+                    "Condition" = "8:"
+                    "Transitive" = "11:FALSE"
+                    "Property" = "8:_3382799B8E8D4B138D8B1327E5A2C21E"
                         "Folders"
                         {
                         }
@@ -1724,7 +1722,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:COOPEGASI1.0"
         "ProductCode" = "8:{5E9F776B-5462-4AB5-861B-1B778ECDB4FF}"
-        "PackageCode" = "8:{340364FF-7D90-4508-A99E-45CC2E3651A9}"
+        "PackageCode" = "8:{A55752D7-68D9-4F64-825F-C967F1EB678D}"
         "UpgradeCode" = "8:{8078A4DF-F889-4CAE-8F4D-E9F5C36B15D2}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -1844,6 +1842,34 @@
         }
         "Shortcut"
         {
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_5278E72D3FC6468E9DDB19C15CD24847"
+            {
+            "Name" = "8:Coopegas"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_1419E1561F344F5786D16F4EC5CDEE94"
+            "Folder" = "8:_DFFB325645184F1784A6F6564B4AC5FE"
+            "WorkingFolder" = "8:_D656C709CB7747D6AD16D4EF0C05FA6A"
+            "Icon" = "8:"
+            "Feature" = "8:"
+            }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_F45078085E83422CAE98B96D0C925E3F"
+            {
+            "Name" = "8:Shortcut to Resultado principal from Coopegas1.0 (Active)"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_1419E1561F344F5786D16F4EC5CDEE94"
+            "Folder" = "8:_C963347F6CAE4A4C96D93CAEFC282EBB"
+            "WorkingFolder" = "8:_D656C709CB7747D6AD16D4EF0C05FA6A"
+            "Icon" = "8:"
+            "Feature" = "8:"
+            }
         }
         "UserInterface"
         {

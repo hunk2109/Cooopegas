@@ -204,7 +204,7 @@ namespace Coopegas1._0
                 DataSet ds = new DataSet();
                 DataTable dt = oper.cosnsultaconresultado("select iddesemb as ID,nombres as Nombres,apellidos as Apellidos, cedula as Cedula,interes as Interes,monto*(interes/100.00) as Cargo ,monto*(interes/100.00)+monto as Monto,fecha as Fecha, tiempo as Meses, (monto*(interes/100.00)+monto)/tiempo as Cuotas from desembolso  inner join cliente on   idclient = cliente_idclient");
                 ds.Tables.Add(dt);
-                ds.WriteXml(@"C:\factura\Prestamos.xml");
+                ds.WriteXml(@"C:\Program Files\hunk2109\COOPEGASI1.0\factura\Prestamos.xml");
                 Visor f = new Visor();
                 f.Show();
             }
@@ -214,7 +214,7 @@ namespace Coopegas1._0
                 DataSet ds = new DataSet();
                 DataTable dt = oper.cosnsultaconresultado("select iddesemb as ID,nombres as Nombres,apellidos as Apellidos, cedula as Cedula,interes as Interes,monto*(interes/100.00) as Cargo ,monto*(interes/100.00)+monto as Monto,fecha as Fecha, tiempo as Meses, (monto*(interes/100.00)+monto)/tiempo as Cuotas from desembolso  inner join cliente on   idclient = cliente_idclient where ID = '" + txtimpprest.Text + "'");
                 ds.Tables.Add(dt);
-                ds.WriteXml(@"C:\factura\Prestamos.xml");
+                ds.WriteXml(@"C:\Program Files\hunk2109\COOPEGASI1.0\factura\Prestamos.xml");
                 Visor f = new Visor();
                 f.Show();
             }
@@ -233,7 +233,7 @@ namespace Coopegas1._0
                 DataSet ds = new DataSet();
                 DataTable dt = oper.cosnsultaconresultado("select nombres,apellidos, idpago,monto_pag,cedula from pago inner join cliente on idclient = cliente_idclient");
                 ds.Tables.Add(dt);
-                ds.WriteXml(@"C:\factura\Pagos.xml");
+                ds.WriteXml(@"C:\Program Files\hunk2109\COOPEGASI1.0\factura\Pagos.xml");
                 visorpagos f = new visorpagos();
                 f.Show();
             }
@@ -243,7 +243,7 @@ namespace Coopegas1._0
                 DataSet ds = new DataSet();
                 DataTable dt = oper.cosnsultaconresultado("select nombres,apellidos, idpago,monto_pag ,cedula from pago inner join cliente on idclient = cliente_idclient where idpago ='" + txtimppago.Text + "'");
                 ds.Tables.Add(dt);
-                ds.WriteXml(@"C:\factura\Pagos.xml");
+                ds.WriteXml(@"C:\Program Files\hunk2109\COOPEGASI1.0\factura\Pagos.xml");
                 visorpagos f = new visorpagos();
                 f.Show();
 
@@ -421,7 +421,7 @@ namespace Coopegas1._0
                 DataSet ds = new DataSet();
                 DataTable dt = oper.cosnsultaconresultado("select idclient as ID, nombres as Nombres, apellidos as Apellidos, direccion as Direccion,tel as Telefono,cedula as Cedula from cliente");
                 ds.Tables.Add(dt);
-                ds.WriteXml(@"C:\factura\Clientes.xml");
+                ds.WriteXml(@"C:\Program Files\hunk2109\COOPEGASI1.0\factura\Clientes.xml");
                 var f = new visorcliet();
                 f.Show();
             }
@@ -431,7 +431,7 @@ namespace Coopegas1._0
                 DataSet ds = new DataSet();
                 DataTable dt = oper.cosnsultaconresultado("select idclient as ID, nombres as Nombres, apellidos as Apellidos, direccion as Direccion,tel as Telefono,cedula as Cedula from cliente where ID ='"+txtidimpclient.Text+"'");
                 ds.Tables.Add(dt);
-                ds.WriteXml(@"C:\factura\Clientes.xml");
+                ds.WriteXml(@"C:\Program Files\hunk2109\COOPEGASI1.0\factura\Clientes.xml");
                 var f = new visorcliet();
                 f.Show();
 

@@ -12,7 +12,7 @@ namespace Coopegas1._0
 {
     public partial class Form1 : Form
     {
-        SQLiteConnection cnx = new SQLiteConnection("Data Source=C:\\bdd\\coopegas.s3db; Version=3;");        
+        SQLiteConnection cnx = new SQLiteConnection("Data Source=C:\\Program Files\\hunk2109\\COOPEGASI1.0\\bdd\\coopegas.s3db; Version=3;");        
         public Form1()
         {
             InitializeComponent();

@@ -11,7 +11,7 @@ namespace Coopegas1._0
     {
         public string conectar()
         {
-            SQLiteConnection cnx = new SQLiteConnection("Data Source=C:\\bdd\\coopegas.s3db; Version=3;");
+            SQLiteConnection cnx = new SQLiteConnection("Data Source=C:\\Program Files\\hunk2109\\COOPEGASI1.0\\bdd\\coopegas.s3db; Version=3;");
             try
             {
                 cnx.Open();
@@ -33,7 +33,7 @@ namespace Coopegas1._0
 
         public string consultasinreaultado(string sql)
         {
-            SQLiteConnection cnx = new SQLiteConnection("Data Source = C:\\bdd\\coopegas.s3db; Version=3;");
+            SQLiteConnection cnx = new SQLiteConnection("Data Source=C:\\Program Files\\hunk2109\\COOPEGASI1.0\\bdd\\coopegas.s3db; Version=3;");
             try
             {
                 cnx.Open();
@@ -55,7 +55,7 @@ namespace Coopegas1._0
         {
             SQLiteDataAdapter ad;
             DataTable dt = new DataTable();
-            SQLiteConnection cnx = new SQLiteConnection("Data Source = C:\\bdd\\coopegas.s3db; Version=3;");
+            SQLiteConnection cnx = new SQLiteConnection("Data Source=C:\\Program Files\\hunk2109\\COOPEGASI1.0\\bdd\\coopegas.s3db; Version=3;");
             try
             {
                 cnx.Open();
