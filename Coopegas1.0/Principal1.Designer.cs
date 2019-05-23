@@ -86,6 +86,36 @@
             this.rbpbnomb = new System.Windows.Forms.RadioButton();
             this.rbbpid = new System.Windows.Forms.RadioButton();
             this.dgvvprest = new System.Windows.Forms.DataGridView();
+            this.tabPage15 = new System.Windows.Forms.TabPage();
+            this.impramor = new System.Windows.Forms.Button();
+            this.label40 = new System.Windows.Forms.Label();
+            this.txtcuota = new System.Windows.Forms.TextBox();
+            this.btncalamor = new System.Windows.Forms.Button();
+            this.groupBox16 = new System.Windows.Forms.GroupBox();
+            this.txtbuspresamor = new System.Windows.Forms.TextBox();
+            this.rbceduamor = new System.Windows.Forms.RadioButton();
+            this.rbfecamor = new System.Windows.Forms.RadioButton();
+            this.rbnomamor = new System.Windows.Forms.RadioButton();
+            this.rbidamorpres = new System.Windows.Forms.RadioButton();
+            this.dgvprestamor = new System.Windows.Forms.DataGridView();
+            this.groupBox15 = new System.Windows.Forms.GroupBox();
+            this.dgvamor = new System.Windows.Forms.DataGridView();
+            this.colperi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechpag = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.salini = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cuotamor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.intamor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.salfinamor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.intacuamor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.dtpamor = new System.Windows.Forms.DateTimePicker();
+            this.txtmesesamor = new System.Windows.Forms.TextBox();
+            this.txtintamor = new System.Windows.Forms.TextBox();
+            this.txtmontamorti = new System.Windows.Forms.TextBox();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabControl4 = new System.Windows.Forms.TabControl();
             this.tabPage8 = new System.Windows.Forms.TabPage();
@@ -201,35 +231,6 @@
             this.label32 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
-            this.tabPage15 = new System.Windows.Forms.TabPage();
-            this.groupBox14 = new System.Windows.Forms.GroupBox();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
-            this.txtmontamorti = new System.Windows.Forms.TextBox();
-            this.txtintamor = new System.Windows.Forms.TextBox();
-            this.txtmesesamor = new System.Windows.Forms.TextBox();
-            this.dtpamor = new System.Windows.Forms.DateTimePicker();
-            this.groupBox15 = new System.Windows.Forms.GroupBox();
-            this.dgvamor = new System.Windows.Forms.DataGridView();
-            this.groupBox16 = new System.Windows.Forms.GroupBox();
-            this.dgvprestamor = new System.Windows.Forms.DataGridView();
-            this.rbidamorpres = new System.Windows.Forms.RadioButton();
-            this.rbnomamor = new System.Windows.Forms.RadioButton();
-            this.rbfecamor = new System.Windows.Forms.RadioButton();
-            this.rbceduamor = new System.Windows.Forms.RadioButton();
-            this.txtbuspresamor = new System.Windows.Forms.TextBox();
-            this.colperi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechpag = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.salini = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cuotamor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.intamor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.salfinamor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.intacuamor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
-            this.txtcuota = new System.Windows.Forms.TextBox();
-            this.label40 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -245,6 +246,12 @@
             this.groupBox2.SuspendLayout();
             this.tabPage7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvvprest)).BeginInit();
+            this.tabPage15.SuspendLayout();
+            this.groupBox16.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvprestamor)).BeginInit();
+            this.groupBox15.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvamor)).BeginInit();
+            this.groupBox14.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabControl4.SuspendLayout();
             this.tabPage8.SuspendLayout();
@@ -273,12 +280,6 @@
             this.groupBox13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvmodpago)).BeginInit();
             this.groupBox12.SuspendLayout();
-            this.tabPage15.SuspendLayout();
-            this.groupBox14.SuspendLayout();
-            this.groupBox15.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvamor)).BeginInit();
-            this.groupBox16.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvprestamor)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -302,7 +303,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(768, 437);
+            this.tabPage1.Size = new System.Drawing.Size(942, 437);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Cliente";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -824,7 +825,7 @@
             this.tabPage7.Location = new System.Drawing.Point(4, 22);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(748, 399);
+            this.tabPage7.Size = new System.Drawing.Size(922, 399);
             this.tabPage7.TabIndex = 1;
             this.tabPage7.Text = "Ver Prestamos";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -908,9 +909,297 @@
             this.dgvvprest.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvvprest.Location = new System.Drawing.Point(6, 30);
             this.dgvvprest.Name = "dgvvprest";
-            this.dgvvprest.Size = new System.Drawing.Size(736, 334);
+            this.dgvvprest.Size = new System.Drawing.Size(910, 334);
             this.dgvvprest.TabIndex = 0;
             this.dgvvprest.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvvprest_CellContentClick);
+            // 
+            // tabPage15
+            // 
+            this.tabPage15.Controls.Add(this.impramor);
+            this.tabPage15.Controls.Add(this.label40);
+            this.tabPage15.Controls.Add(this.txtcuota);
+            this.tabPage15.Controls.Add(this.btncalamor);
+            this.tabPage15.Controls.Add(this.groupBox16);
+            this.tabPage15.Controls.Add(this.groupBox15);
+            this.tabPage15.Controls.Add(this.groupBox14);
+            this.tabPage15.Location = new System.Drawing.Point(4, 22);
+            this.tabPage15.Name = "tabPage15";
+            this.tabPage15.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage15.Size = new System.Drawing.Size(922, 399);
+            this.tabPage15.TabIndex = 2;
+            this.tabPage15.Text = "Amortizacion";
+            this.tabPage15.UseVisualStyleBackColor = true;
+            // 
+            // impramor
+            // 
+            this.impramor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.impramor.Location = new System.Drawing.Point(8, 360);
+            this.impramor.Name = "impramor";
+            this.impramor.Size = new System.Drawing.Size(75, 36);
+            this.impramor.TabIndex = 6;
+            this.impramor.Text = "Imprimir Amortizacion";
+            this.impramor.UseVisualStyleBackColor = true;
+            this.impramor.Click += new System.EventHandler(this.impramor_Click);
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(255, 25);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(35, 13);
+            this.label40.TabIndex = 5;
+            this.label40.Text = "Cuota";
+            // 
+            // txtcuota
+            // 
+            this.txtcuota.Location = new System.Drawing.Point(296, 22);
+            this.txtcuota.Name = "txtcuota";
+            this.txtcuota.Size = new System.Drawing.Size(100, 20);
+            this.txtcuota.TabIndex = 4;
+            // 
+            // btncalamor
+            // 
+            this.btncalamor.Location = new System.Drawing.Point(258, 48);
+            this.btncalamor.Name = "btncalamor";
+            this.btncalamor.Size = new System.Drawing.Size(75, 23);
+            this.btncalamor.TabIndex = 3;
+            this.btncalamor.Text = "Calcular";
+            this.btncalamor.UseVisualStyleBackColor = true;
+            this.btncalamor.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // groupBox16
+            // 
+            this.groupBox16.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox16.Controls.Add(this.txtbuspresamor);
+            this.groupBox16.Controls.Add(this.rbceduamor);
+            this.groupBox16.Controls.Add(this.rbfecamor);
+            this.groupBox16.Controls.Add(this.rbnomamor);
+            this.groupBox16.Controls.Add(this.rbidamorpres);
+            this.groupBox16.Controls.Add(this.dgvprestamor);
+            this.groupBox16.Location = new System.Drawing.Point(559, 6);
+            this.groupBox16.Name = "groupBox16";
+            this.groupBox16.Size = new System.Drawing.Size(357, 205);
+            this.groupBox16.TabIndex = 2;
+            this.groupBox16.TabStop = false;
+            this.groupBox16.Text = "Prestamos";
+            // 
+            // txtbuspresamor
+            // 
+            this.txtbuspresamor.Location = new System.Drawing.Point(243, 16);
+            this.txtbuspresamor.Name = "txtbuspresamor";
+            this.txtbuspresamor.Size = new System.Drawing.Size(100, 20);
+            this.txtbuspresamor.TabIndex = 5;
+            this.txtbuspresamor.TextChanged += new System.EventHandler(this.textBox1_TextChanged_4);
+            // 
+            // rbceduamor
+            // 
+            this.rbceduamor.AutoSize = true;
+            this.rbceduamor.Location = new System.Drawing.Point(179, 20);
+            this.rbceduamor.Name = "rbceduamor";
+            this.rbceduamor.Size = new System.Drawing.Size(58, 17);
+            this.rbceduamor.TabIndex = 4;
+            this.rbceduamor.TabStop = true;
+            this.rbceduamor.Text = "Cedula";
+            this.rbceduamor.UseVisualStyleBackColor = true;
+            // 
+            // rbfecamor
+            // 
+            this.rbfecamor.AutoSize = true;
+            this.rbfecamor.Location = new System.Drawing.Point(117, 20);
+            this.rbfecamor.Name = "rbfecamor";
+            this.rbfecamor.Size = new System.Drawing.Size(55, 17);
+            this.rbfecamor.TabIndex = 3;
+            this.rbfecamor.TabStop = true;
+            this.rbfecamor.Text = "Fecha";
+            this.rbfecamor.UseVisualStyleBackColor = true;
+            // 
+            // rbnomamor
+            // 
+            this.rbnomamor.AutoSize = true;
+            this.rbnomamor.Location = new System.Drawing.Point(49, 19);
+            this.rbnomamor.Name = "rbnomamor";
+            this.rbnomamor.Size = new System.Drawing.Size(62, 17);
+            this.rbnomamor.TabIndex = 2;
+            this.rbnomamor.TabStop = true;
+            this.rbnomamor.Text = "Nombre";
+            this.rbnomamor.UseVisualStyleBackColor = true;
+            // 
+            // rbidamorpres
+            // 
+            this.rbidamorpres.AutoSize = true;
+            this.rbidamorpres.Location = new System.Drawing.Point(7, 20);
+            this.rbidamorpres.Name = "rbidamorpres";
+            this.rbidamorpres.Size = new System.Drawing.Size(36, 17);
+            this.rbidamorpres.TabIndex = 1;
+            this.rbidamorpres.TabStop = true;
+            this.rbidamorpres.Text = "ID";
+            this.rbidamorpres.UseVisualStyleBackColor = true;
+            // 
+            // dgvprestamor
+            // 
+            this.dgvprestamor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvprestamor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvprestamor.Location = new System.Drawing.Point(6, 55);
+            this.dgvprestamor.Name = "dgvprestamor";
+            this.dgvprestamor.ReadOnly = true;
+            this.dgvprestamor.Size = new System.Drawing.Size(345, 144);
+            this.dgvprestamor.TabIndex = 0;
+            this.dgvprestamor.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvprestamor_CellContentClick);
+            // 
+            // groupBox15
+            // 
+            this.groupBox15.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox15.Controls.Add(this.dgvamor);
+            this.groupBox15.Location = new System.Drawing.Point(8, 217);
+            this.groupBox15.Name = "groupBox15";
+            this.groupBox15.Size = new System.Drawing.Size(902, 137);
+            this.groupBox15.TabIndex = 1;
+            this.groupBox15.TabStop = false;
+            this.groupBox15.Text = "Amortizacion";
+            // 
+            // dgvamor
+            // 
+            this.dgvamor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvamor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colperi,
+            this.fechpag,
+            this.salini,
+            this.cuotamor,
+            this.intamor,
+            this.salfinamor,
+            this.intacuamor});
+            this.dgvamor.Location = new System.Drawing.Point(16, 19);
+            this.dgvamor.Name = "dgvamor";
+            this.dgvamor.Size = new System.Drawing.Size(886, 112);
+            this.dgvamor.TabIndex = 0;
+            this.dgvamor.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvamor_CellContentClick);
+            // 
+            // colperi
+            // 
+            this.colperi.HeaderText = "Periodo";
+            this.colperi.Name = "colperi";
+            // 
+            // fechpag
+            // 
+            this.fechpag.HeaderText = "Fecha de Pago";
+            this.fechpag.Name = "fechpag";
+            // 
+            // salini
+            // 
+            this.salini.HeaderText = "Saldo Inicial";
+            this.salini.Name = "salini";
+            // 
+            // cuotamor
+            // 
+            this.cuotamor.HeaderText = "Cuota";
+            this.cuotamor.Name = "cuotamor";
+            // 
+            // intamor
+            // 
+            this.intamor.HeaderText = "Interes";
+            this.intamor.Name = "intamor";
+            // 
+            // salfinamor
+            // 
+            this.salfinamor.HeaderText = "Saldo Final";
+            this.salfinamor.Name = "salfinamor";
+            // 
+            // intacuamor
+            // 
+            this.intacuamor.HeaderText = "Interes acumulado";
+            this.intacuamor.Name = "intacuamor";
+            // 
+            // groupBox14
+            // 
+            this.groupBox14.Controls.Add(this.dtpamor);
+            this.groupBox14.Controls.Add(this.txtmesesamor);
+            this.groupBox14.Controls.Add(this.txtintamor);
+            this.groupBox14.Controls.Add(this.txtmontamorti);
+            this.groupBox14.Controls.Add(this.label39);
+            this.groupBox14.Controls.Add(this.label38);
+            this.groupBox14.Controls.Add(this.label37);
+            this.groupBox14.Controls.Add(this.label36);
+            this.groupBox14.Location = new System.Drawing.Point(6, 6);
+            this.groupBox14.Name = "groupBox14";
+            this.groupBox14.Size = new System.Drawing.Size(229, 192);
+            this.groupBox14.TabIndex = 0;
+            this.groupBox14.TabStop = false;
+            this.groupBox14.Text = "Datos del Prestamo";
+            // 
+            // dtpamor
+            // 
+            this.dtpamor.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpamor.Location = new System.Drawing.Point(112, 146);
+            this.dtpamor.Name = "dtpamor";
+            this.dtpamor.Size = new System.Drawing.Size(89, 20);
+            this.dtpamor.TabIndex = 7;
+            // 
+            // txtmesesamor
+            // 
+            this.txtmesesamor.Location = new System.Drawing.Point(82, 116);
+            this.txtmesesamor.Name = "txtmesesamor";
+            this.txtmesesamor.ReadOnly = true;
+            this.txtmesesamor.Size = new System.Drawing.Size(100, 20);
+            this.txtmesesamor.TabIndex = 6;
+            // 
+            // txtintamor
+            // 
+            this.txtintamor.Location = new System.Drawing.Point(82, 73);
+            this.txtintamor.Name = "txtintamor";
+            this.txtintamor.ReadOnly = true;
+            this.txtintamor.Size = new System.Drawing.Size(100, 20);
+            this.txtintamor.TabIndex = 5;
+            // 
+            // txtmontamorti
+            // 
+            this.txtmontamorti.Location = new System.Drawing.Point(82, 32);
+            this.txtmontamorti.Name = "txtmontamorti";
+            this.txtmontamorti.ReadOnly = true;
+            this.txtmontamorti.Size = new System.Drawing.Size(100, 20);
+            this.txtmontamorti.TabIndex = 4;
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(15, 152);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(91, 13);
+            this.label39.TabIndex = 3;
+            this.label39.Text = "Fecha de emicion";
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(15, 119);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(38, 13);
+            this.label38.TabIndex = 2;
+            this.label38.Text = "Meses";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(15, 76);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(60, 13);
+            this.label37.TabIndex = 1;
+            this.label37.Text = "Tasa anual";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(15, 32);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(37, 13);
+            this.label36.TabIndex = 0;
+            this.label36.Text = "Monto";
             // 
             // tabPage3
             // 
@@ -918,7 +1207,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(768, 437);
+            this.tabPage3.Size = new System.Drawing.Size(942, 437);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Pagos";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -1238,7 +1527,7 @@
             this.tabamin.Location = new System.Drawing.Point(4, 22);
             this.tabamin.Name = "tabamin";
             this.tabamin.Padding = new System.Windows.Forms.Padding(3);
-            this.tabamin.Size = new System.Drawing.Size(768, 437);
+            this.tabamin.Size = new System.Drawing.Size(942, 437);
             this.tabamin.TabIndex = 3;
             this.tabamin.Text = "Administrador";
             this.tabamin.UseVisualStyleBackColor = true;
@@ -2133,281 +2422,6 @@
             this.label30.TabIndex = 0;
             this.label30.Text = "ID del Pago";
             // 
-            // tabPage15
-            // 
-            this.tabPage15.Controls.Add(this.label40);
-            this.tabPage15.Controls.Add(this.txtcuota);
-            this.tabPage15.Controls.Add(this.button1);
-            this.tabPage15.Controls.Add(this.groupBox16);
-            this.tabPage15.Controls.Add(this.groupBox15);
-            this.tabPage15.Controls.Add(this.groupBox14);
-            this.tabPage15.Location = new System.Drawing.Point(4, 22);
-            this.tabPage15.Name = "tabPage15";
-            this.tabPage15.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage15.Size = new System.Drawing.Size(922, 399);
-            this.tabPage15.TabIndex = 2;
-            this.tabPage15.Text = "Amortizacion";
-            this.tabPage15.UseVisualStyleBackColor = true;
-            // 
-            // groupBox14
-            // 
-            this.groupBox14.Controls.Add(this.dtpamor);
-            this.groupBox14.Controls.Add(this.txtmesesamor);
-            this.groupBox14.Controls.Add(this.txtintamor);
-            this.groupBox14.Controls.Add(this.txtmontamorti);
-            this.groupBox14.Controls.Add(this.label39);
-            this.groupBox14.Controls.Add(this.label38);
-            this.groupBox14.Controls.Add(this.label37);
-            this.groupBox14.Controls.Add(this.label36);
-            this.groupBox14.Location = new System.Drawing.Point(6, 6);
-            this.groupBox14.Name = "groupBox14";
-            this.groupBox14.Size = new System.Drawing.Size(229, 192);
-            this.groupBox14.TabIndex = 0;
-            this.groupBox14.TabStop = false;
-            this.groupBox14.Text = "Datos del Prestamo";
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(15, 32);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(37, 13);
-            this.label36.TabIndex = 0;
-            this.label36.Text = "Monto";
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(15, 76);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(60, 13);
-            this.label37.TabIndex = 1;
-            this.label37.Text = "Tasa anual";
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(15, 119);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(38, 13);
-            this.label38.TabIndex = 2;
-            this.label38.Text = "Meses";
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(15, 152);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(91, 13);
-            this.label39.TabIndex = 3;
-            this.label39.Text = "Fecha de emicion";
-            // 
-            // txtmontamorti
-            // 
-            this.txtmontamorti.Location = new System.Drawing.Point(82, 32);
-            this.txtmontamorti.Name = "txtmontamorti";
-            this.txtmontamorti.ReadOnly = true;
-            this.txtmontamorti.Size = new System.Drawing.Size(100, 20);
-            this.txtmontamorti.TabIndex = 4;
-            // 
-            // txtintamor
-            // 
-            this.txtintamor.Location = new System.Drawing.Point(82, 73);
-            this.txtintamor.Name = "txtintamor";
-            this.txtintamor.ReadOnly = true;
-            this.txtintamor.Size = new System.Drawing.Size(100, 20);
-            this.txtintamor.TabIndex = 5;
-            // 
-            // txtmesesamor
-            // 
-            this.txtmesesamor.Location = new System.Drawing.Point(82, 116);
-            this.txtmesesamor.Name = "txtmesesamor";
-            this.txtmesesamor.ReadOnly = true;
-            this.txtmesesamor.Size = new System.Drawing.Size(100, 20);
-            this.txtmesesamor.TabIndex = 6;
-            // 
-            // dtpamor
-            // 
-            this.dtpamor.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpamor.Location = new System.Drawing.Point(112, 146);
-            this.dtpamor.Name = "dtpamor";
-            this.dtpamor.Size = new System.Drawing.Size(89, 20);
-            this.dtpamor.TabIndex = 7;
-            // 
-            // groupBox15
-            // 
-            this.groupBox15.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox15.Controls.Add(this.dgvamor);
-            this.groupBox15.Location = new System.Drawing.Point(8, 217);
-            this.groupBox15.Name = "groupBox15";
-            this.groupBox15.Size = new System.Drawing.Size(902, 176);
-            this.groupBox15.TabIndex = 1;
-            this.groupBox15.TabStop = false;
-            this.groupBox15.Text = "Amortizacion";
-            // 
-            // dgvamor
-            // 
-            this.dgvamor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvamor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colperi,
-            this.fechpag,
-            this.salini,
-            this.cuotamor,
-            this.intamor,
-            this.salfinamor,
-            this.intacuamor});
-            this.dgvamor.Location = new System.Drawing.Point(16, 19);
-            this.dgvamor.Name = "dgvamor";
-            this.dgvamor.Size = new System.Drawing.Size(886, 151);
-            this.dgvamor.TabIndex = 0;
-            // 
-            // groupBox16
-            // 
-            this.groupBox16.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox16.Controls.Add(this.txtbuspresamor);
-            this.groupBox16.Controls.Add(this.rbceduamor);
-            this.groupBox16.Controls.Add(this.rbfecamor);
-            this.groupBox16.Controls.Add(this.rbnomamor);
-            this.groupBox16.Controls.Add(this.rbidamorpres);
-            this.groupBox16.Controls.Add(this.dgvprestamor);
-            this.groupBox16.Location = new System.Drawing.Point(559, 6);
-            this.groupBox16.Name = "groupBox16";
-            this.groupBox16.Size = new System.Drawing.Size(357, 205);
-            this.groupBox16.TabIndex = 2;
-            this.groupBox16.TabStop = false;
-            this.groupBox16.Text = "Prestamos";
-            // 
-            // dgvprestamor
-            // 
-            this.dgvprestamor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvprestamor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvprestamor.Location = new System.Drawing.Point(6, 55);
-            this.dgvprestamor.Name = "dgvprestamor";
-            this.dgvprestamor.ReadOnly = true;
-            this.dgvprestamor.Size = new System.Drawing.Size(345, 144);
-            this.dgvprestamor.TabIndex = 0;
-            this.dgvprestamor.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvprestamor_CellContentClick);
-            // 
-            // rbidamorpres
-            // 
-            this.rbidamorpres.AutoSize = true;
-            this.rbidamorpres.Location = new System.Drawing.Point(7, 20);
-            this.rbidamorpres.Name = "rbidamorpres";
-            this.rbidamorpres.Size = new System.Drawing.Size(36, 17);
-            this.rbidamorpres.TabIndex = 1;
-            this.rbidamorpres.TabStop = true;
-            this.rbidamorpres.Text = "ID";
-            this.rbidamorpres.UseVisualStyleBackColor = true;
-            // 
-            // rbnomamor
-            // 
-            this.rbnomamor.AutoSize = true;
-            this.rbnomamor.Location = new System.Drawing.Point(49, 19);
-            this.rbnomamor.Name = "rbnomamor";
-            this.rbnomamor.Size = new System.Drawing.Size(62, 17);
-            this.rbnomamor.TabIndex = 2;
-            this.rbnomamor.TabStop = true;
-            this.rbnomamor.Text = "Nombre";
-            this.rbnomamor.UseVisualStyleBackColor = true;
-            // 
-            // rbfecamor
-            // 
-            this.rbfecamor.AutoSize = true;
-            this.rbfecamor.Location = new System.Drawing.Point(117, 20);
-            this.rbfecamor.Name = "rbfecamor";
-            this.rbfecamor.Size = new System.Drawing.Size(55, 17);
-            this.rbfecamor.TabIndex = 3;
-            this.rbfecamor.TabStop = true;
-            this.rbfecamor.Text = "Fecha";
-            this.rbfecamor.UseVisualStyleBackColor = true;
-            // 
-            // rbceduamor
-            // 
-            this.rbceduamor.AutoSize = true;
-            this.rbceduamor.Location = new System.Drawing.Point(179, 20);
-            this.rbceduamor.Name = "rbceduamor";
-            this.rbceduamor.Size = new System.Drawing.Size(58, 17);
-            this.rbceduamor.TabIndex = 4;
-            this.rbceduamor.TabStop = true;
-            this.rbceduamor.Text = "Cedula";
-            this.rbceduamor.UseVisualStyleBackColor = true;
-            // 
-            // txtbuspresamor
-            // 
-            this.txtbuspresamor.Location = new System.Drawing.Point(243, 16);
-            this.txtbuspresamor.Name = "txtbuspresamor";
-            this.txtbuspresamor.Size = new System.Drawing.Size(100, 20);
-            this.txtbuspresamor.TabIndex = 5;
-            this.txtbuspresamor.TextChanged += new System.EventHandler(this.textBox1_TextChanged_4);
-            // 
-            // colperi
-            // 
-            this.colperi.HeaderText = "Periodo";
-            this.colperi.Name = "colperi";
-            // 
-            // fechpag
-            // 
-            this.fechpag.HeaderText = "Fecha de Pago";
-            this.fechpag.Name = "fechpag";
-            // 
-            // salini
-            // 
-            this.salini.HeaderText = "Saldo Inicial";
-            this.salini.Name = "salini";
-            // 
-            // cuotamor
-            // 
-            this.cuotamor.HeaderText = "Cuota";
-            this.cuotamor.Name = "cuotamor";
-            // 
-            // intamor
-            // 
-            this.intamor.HeaderText = "Interes";
-            this.intamor.Name = "intamor";
-            // 
-            // salfinamor
-            // 
-            this.salfinamor.HeaderText = "Saldo Final";
-            this.salfinamor.Name = "salfinamor";
-            // 
-            // intacuamor
-            // 
-            this.intacuamor.HeaderText = "Interes acumulado";
-            this.intacuamor.Name = "intacuamor";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(241, 175);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Prueba";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // txtcuota
-            // 
-            this.txtcuota.Location = new System.Drawing.Point(296, 22);
-            this.txtcuota.Name = "txtcuota";
-            this.txtcuota.Size = new System.Drawing.Size(100, 20);
-            this.txtcuota.TabIndex = 4;
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(255, 25);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(35, 13);
-            this.label40.TabIndex = 5;
-            this.label40.Text = "Cuota";
-            // 
             // Principal1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2437,6 +2451,15 @@
             this.tabPage7.ResumeLayout(false);
             this.tabPage7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvvprest)).EndInit();
+            this.tabPage15.ResumeLayout(false);
+            this.tabPage15.PerformLayout();
+            this.groupBox16.ResumeLayout(false);
+            this.groupBox16.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvprestamor)).EndInit();
+            this.groupBox15.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvamor)).EndInit();
+            this.groupBox14.ResumeLayout(false);
+            this.groupBox14.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabControl4.ResumeLayout(false);
             this.tabPage8.ResumeLayout(false);
@@ -2476,15 +2499,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvmodpago)).EndInit();
             this.groupBox12.ResumeLayout(false);
             this.groupBox12.PerformLayout();
-            this.tabPage15.ResumeLayout(false);
-            this.tabPage15.PerformLayout();
-            this.groupBox14.ResumeLayout(false);
-            this.groupBox14.PerformLayout();
-            this.groupBox15.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvamor)).EndInit();
-            this.groupBox16.ResumeLayout(false);
-            this.groupBox16.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvprestamor)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2690,8 +2704,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn intamor;
         private System.Windows.Forms.DataGridViewTextBoxColumn salfinamor;
         private System.Windows.Forms.DataGridViewTextBoxColumn intacuamor;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btncalamor;
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.TextBox txtcuota;
+        private System.Windows.Forms.Button impramor;
     }
 }

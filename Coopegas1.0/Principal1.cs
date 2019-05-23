@@ -9,6 +9,12 @@ using System.Windows.Forms;
 using System.Data.SQLite;
 using System.Text.RegularExpressions;
 using System.IO;
+using CrystalDecisions.CrystalReports;
+using CrystalDecisions.CrystalReports.Engine;
+using CrystalDecisions.ReportSource;
+using CrystalDecisions.Windows.Forms;
+using System.Xml;
+using System.Xml.Linq;
 
 namespace Coopegas1._0
 {
@@ -86,6 +92,7 @@ namespace Coopegas1._0
                 dgvvprest.DataSource = oper.cosnsultaconresultado("select iddesemb as ID,nombres as Nombres,apellidos as Apellidos, cedula as Cedula,interes as Interes,monto*(interes/100.00) as Cargo ,monto*(interes/100.00)+monto as Monto,fecha as Fecha, tiempo as Meses, (monto*(interes/100.00)+monto)/tiempo as Cuotas from desembolso  inner join cliente on   idclient = cliente_idclient");
                 dgvprestpag.DataSource = oper.cosnsultaconresultado("select idclient as Indentificacion,iddesemb as ID,nombres as Nombres,apellidos as Apellidos, cedula as Cedula,interes as Interes,monto*(interes/100.00) as Cargo ,monto*(interes/100.0)+monto as Monto,fecha as Fecha, tiempo as Meses, (monto*(interes/100.0)+monto)/tiempo as Cuotas from desembolso  inner join cliente on   idclient = cliente_idclient");
                 dgvpagos.DataSource = oper.cosnsultaconresultado("select nombres,apellidos, idpago,monto_pag,cedula from pago inner join cliente on idclient = cliente_idclient");
+                dgvprestamor.DataSource = oper.cosnsultaconresultado("select id_presta as ID, nombres as Nombres,apellidos as Apellido,cedula as Cedula, montop as Monto,interesp as Interes,tiempop as Tiempo, fechap as Fecha  from prestamo inner join cliente on cli_idclient = idclient");
                 txtmont.Clear();
                 txtint.Clear();
                 txtidcleintp.Clear();
@@ -788,6 +795,8 @@ namespace Coopegas1._0
         private void button1_Click(object sender, EventArgs e)
         {
             dgvamor.Rows.Clear();
+            calcular();
+
         }
 
 
@@ -860,9 +869,61 @@ namespace Coopegas1._0
 
         private void dgvprestamor_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            DataGridViewRow act = dgvprestamor.Rows[e.RowIndex];
+            
+            txtmontamorti.Text = act.Cells["Monto"].Value.ToString();
+            txtmesesamor.Text = act.Cells["Tiempo"].Value.ToString();
+            txtintamor.Text = act.Cells["Interes"].Value.ToString();
 
         }
+
+        private void dgvamor_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void impramor_Click(object sender, EventArgs e)
+        {
+
+            SaveData();
+
+
+        }
+
+      void SaveData()
+        {
+            DataTable dt = new DataTable();
+            for (int i = 1; i < dgvamor.Columns.Count + 1; i++)
+            {
+                DataColumn column = new DataColumn(dgvamor.Columns[i - 1].HeaderText);
+                dt.Columns.Add(column);
+            }
+            int columnCount = dgvamor.Columns.Count;
+            foreach (DataGridViewRow dr in dgvamor.Rows)
+            {
+                DataRow dataRow = dt.NewRow();
+                for (int i = 0; i < columnCount; i++)
+                {
+                    //returns checkboxes and dropdowns as string with .value..... nearly got it
+                    dataRow[i] = dr.Cells[i].Value;
+                }
+                dt.Rows.Add(dataRow);
+            }
+            DataSet ds = new DataSet();
+            ds.Tables.Add(dt);
+            XmlTextWriter xmlSave = new XmlTextWriter(@"c:/factura/DGVXML.xml", Encoding.UTF8);
+
+            ds.WriteXml(xmlSave);
+            xmlSave.Close();
+
+            veramort f = new veramort();
+            f.Show();
+                
+        }
     }
-}
+
+    }
+
+
 
 
