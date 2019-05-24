@@ -231,6 +231,7 @@
             this.label32 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
+            this.tabPage16 = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -1541,6 +1542,7 @@
             this.tabControl5.Controls.Add(this.tabPage12);
             this.tabControl5.Controls.Add(this.tabPage13);
             this.tabControl5.Controls.Add(this.tabPage14);
+            this.tabControl5.Controls.Add(this.tabPage16);
             this.tabControl5.Location = new System.Drawing.Point(7, 6);
             this.tabControl5.Name = "tabControl5";
             this.tabControl5.SelectedIndex = 0;
@@ -2422,6 +2424,16 @@
             this.label30.TabIndex = 0;
             this.label30.Text = "ID del Pago";
             // 
+            // tabPage16
+            // 
+            this.tabPage16.Location = new System.Drawing.Point(4, 22);
+            this.tabPage16.Name = "tabPage16";
+            this.tabPage16.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage16.Size = new System.Drawing.Size(747, 399);
+            this.tabPage16.TabIndex = 4;
+            this.tabPage16.Text = "Backup";
+            this.tabPage16.UseVisualStyleBackColor = true;
+            // 
             // Principal1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2708,5 +2720,6 @@
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.TextBox txtcuota;
         private System.Windows.Forms.Button impramor;
+        private System.Windows.Forms.TabPage tabPage16;
     }
 }

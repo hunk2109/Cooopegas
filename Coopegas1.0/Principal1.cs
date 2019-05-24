@@ -71,6 +71,14 @@ namespace Coopegas1._0
 
 
             }
+            if (!Directory.Exists(Path.GetDirectoryName(@"C:\factura\bacukp")))
+            {
+                Directory.CreateDirectory(Path.GetDirectoryName(@"C:\factura\backup"));
+
+
+
+            }
+            backup();
 
 
 
@@ -977,6 +985,22 @@ namespace Coopegas1._0
             veramort f = new veramort();
             f.Show();
                 
+        }
+
+        public void backup()
+        {
+            string sourcePath = @"C:\Program Files\hunk2109\COOPEGASI1.0\bdd";
+            string destinationPath = @"C:\factura\backup";
+            string sourceFileName = "coopegas.s3db";
+            string destinationFileName = DateTime.Now.ToString("yyyyMMddhhmmss") + ".s3db"; // Don't mind this. I did this because I needed to name the copied files with respect to time.
+            string sourceFile = System.IO.Path.Combine(sourcePath, sourceFileName);
+            string destinationFile = System.IO.Path.Combine(destinationPath, destinationFileName);
+
+            if (!System.IO.Directory.Exists(destinationPath))
+            {
+                System.IO.Directory.CreateDirectory(destinationPath);
+            }
+            System.IO.File.Copy(sourceFile, destinationFile, true);
         }
     }
 
