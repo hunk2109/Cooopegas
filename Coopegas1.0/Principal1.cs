@@ -794,8 +794,17 @@ namespace Coopegas1._0
 
         private void button1_Click(object sender, EventArgs e)
         {
-            dgvamor.Rows.Clear();
-            calcular();
+            if (string.IsNullOrEmpty(txtmontamorti.Text) | string.IsNullOrEmpty(txtintamor.Text) | string.IsNullOrEmpty(txtmesesamor.Text))
+            {
+                MessageBox.Show("Seleccione un Prestamo");
+
+            }
+
+            else
+            {
+                dgvamor.Rows.Clear();
+                calcular();
+            }
 
         }
 

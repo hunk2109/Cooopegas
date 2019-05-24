@@ -15,6 +15,12 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_027521992C3549A2ADBF104F394BD39C"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_1419E1561F344F5786D16F4EC5CDEE94"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -311,12 +317,6 @@
         {
         "MsmKey" = "8:_A94033F1082F1A7D64B83DEB7E20B99F"
         "OwnerKey" = "8:_4ED706F68B86C2C2846CB5043314D998"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_AD441A8B5ADA4F1890D1D0B53CF14964"
-        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -760,6 +760,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.6.1"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.6.1 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.6.1"
+                    }
+                }
             }
         }
     }
@@ -790,6 +798,26 @@
         }
         "File"
         {
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_027521992C3549A2ADBF104F394BD39C"
+            {
+            "SourcePath" = "8:C:\\Program Files\\hunk2109\\COOPEGASI1.0\\bdd\\coopegas.s3db"
+            "TargetName" = "8:coopegas.s3db"
+            "Tag" = "8:"
+            "Folder" = "8:_526D970464CD48D9BFDF83436923A721"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1F3D42DBF3879A33EFA61ED99114D8CE"
             {
             "SourcePath" = "8:Flash.ocx"
@@ -1315,26 +1343,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_AD441A8B5ADA4F1890D1D0B53CF14964"
-            {
-            "SourcePath" = "8:C:\\Artificial Academy 2\\bdd\\coopegas.s3db"
-            "TargetName" = "8:coopegas.s3db"
-            "Tag" = "8:"
-            "Folder" = "8:_526D970464CD48D9BFDF83436923A721"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_BB276802E460004777D9C0D5737E1CA7"
             {
             "AssemblyRegister" = "3:1"
@@ -1746,7 +1754,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:COOPEGASI1.0"
         "ProductCode" = "8:{5E9F776B-5462-4AB5-861B-1B778ECDB4FF}"
-        "PackageCode" = "8:{88977733-4540-49D0-80AD-A5B54349BD0D}"
+        "PackageCode" = "8:{6AE4AE55-546E-44C5-97CA-B9AAE9F12F7D}"
         "UpgradeCode" = "8:{8078A4DF-F889-4CAE-8F4D-E9F5C36B15D2}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
