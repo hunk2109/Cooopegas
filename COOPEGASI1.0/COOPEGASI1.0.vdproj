@@ -381,7 +381,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_E2551201E6024E12BB84508E488ED938"
+        "MsmKey" = "8:_E41C772E78144A8AAB83607C9DA4A0B8"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -1442,9 +1442,9 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E2551201E6024E12BB84508E488ED938"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E41C772E78144A8AAB83607C9DA4A0B8"
             {
-            "SourcePath" = "8:..\\..\\..\\..\\Desktop\\coopegas.s3db"
+            "SourcePath" = "8:C:\\Program Files\\hunk2109\\COOPEGASI1.0\\bdd\\coopegas.s3db"
             "TargetName" = "8:coopegas.s3db"
             "Tag" = "8:"
             "Folder" = "8:_526D970464CD48D9BFDF83436923A721"
@@ -1780,7 +1780,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:COOPEGASI1.0"
         "ProductCode" = "8:{5E9F776B-5462-4AB5-861B-1B778ECDB4FF}"
-        "PackageCode" = "8:{6BE8D649-A34D-4A89-AC30-4B68757125B7}"
+        "PackageCode" = "8:{DA5F7C66-EB2F-47FC-9217-83987FE97DAD}"
         "UpgradeCode" = "8:{8078A4DF-F889-4CAE-8F4D-E9F5C36B15D2}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -2329,7 +2329,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_1419E1561F344F5786D16F4EC5CDEE94"
             {
-            "SourcePath" = "8:..\\Coopegas1.0\\obj\\Debug\\Coopegas1.0.exe"
+            "SourcePath" = "8:..\\Coopegas1.0\\obj\\Release\\Coopegas1.0.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_D656C709CB7747D6AD16D4EF0C05FA6A"

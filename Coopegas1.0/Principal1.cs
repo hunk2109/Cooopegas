@@ -86,13 +86,17 @@ namespace Coopegas1._0
             }
             else {
                 oper.consultasinreaultado("insert into desembolso(monto,fecha,interes,tiempo,cliente_idclient)values('" + txtmont.Text + "','" + dtpprest.Text + "','" + txtint.Text + "','" + cmbtiemp.Text + "','" + txtidcleintp.Text + "')");
-                dgvvprest.DataSource = oper.cosnsultaconresultado("select iddesemb as ID,nombres as Nombres,apellidos as Apellidos, cedula as Cedula,interes as Interes,monto*(interes/100.00) as Cargo ,monto*(interes/100.00)+monto as Monto,fecha as Fecha, tiempo as Meses from desembolso  inner join cliente on   idclient = cliente_idclient");
-                dgvverclient.DataSource = oper.cosnsultaconresultado("select * from cliente");
+                dgvverclient.DataSource = oper.cosnsultaconresultado("select idclient as ID, nombres as Nombres, apellidos as Apellidos, direccion as Direccion,tel as Telefono,cedula as Cedula from cliente");
                 dgvverclientprest.DataSource = oper.cosnsultaconresultado("select * from cliente");
                 dgvvprest.DataSource = oper.cosnsultaconresultado("select iddesemb as ID,nombres as Nombres,apellidos as Apellidos, cedula as Cedula,interes as Interes,monto*(interes/100.00) as Cargo ,monto*(interes/100.00)+monto as Monto,fecha as Fecha, tiempo as Meses, (monto*(interes/100.00)+monto)/tiempo as Cuotas from desembolso  inner join cliente on   idclient = cliente_idclient");
                 dgvprestpag.DataSource = oper.cosnsultaconresultado("select idclient as Indentificacion,iddesemb as ID,nombres as Nombres,apellidos as Apellidos, cedula as Cedula,interes as Interes,monto*(interes/100.00) as Cargo ,monto*(interes/100.0)+monto as Monto,fecha as Fecha, tiempo as Meses, (monto*(interes/100.0)+monto)/tiempo as Cuotas from desembolso  inner join cliente on   idclient = cliente_idclient");
-                dgvpagos.DataSource = oper.cosnsultaconresultado("select nombres,apellidos, idpago,monto_pag,cedula from pago inner join cliente on idclient = cliente_idclient");
+                dgvpagos.DataSource = oper.cosnsultaconresultado("select nombres as Nombres,apellidos as Apellidos, idpago as ID,monto_pag as Pago,cedula as Cedula from pago inner join cliente on idclient = cliente_idclient");
+                dgvuser.DataSource = oper.cosnsultaconresultado("select * from usuario");
+                dgvmodclient.DataSource = oper.cosnsultaconresultado("select idclient as ID, nombres as Nombres, apellidos as Apellidos, direccion as Direccion,tel as Telefono,cedula as Cedula from cliente");
+                dgvmodprest.DataSource = oper.cosnsultaconresultado("select iddesemb as ID,cliente_idclient as IDC,nombres as Nombres,apellidos as Apellidos, cedula as Cedula,interes as Interes,monto ,monto*(interes/100.00) as Cargo ,monto*(interes/100.00)+monto as Monto,fecha as Fecha, tiempo as Meses, (monto*(interes/100.00)+monto)/tiempo as Cuotas from desembolso  inner join cliente on   idclient = cliente_idclient");
+                dgvmodpago.DataSource = oper.cosnsultaconresultado("select nombres as Nombres,apellidos as Apellidos, idpago as ID,cliente_idclient as IDC,desembolso_iddesemb as IDP,monto_pag as Pago,cedula as Cedula,fecha as Fecha from pago inner join cliente on idclient = cliente_idclient");
                 dgvprestamor.DataSource = oper.cosnsultaconresultado("select id_presta as ID, nombres as Nombres,apellidos as Apellido,cedula as Cedula, montop as Monto,interesp as Interes,tiempop as Tiempo, fechap as Fecha  from prestamo inner join cliente on cli_idclient = idclient");
+
                 txtmont.Clear();
                 txtint.Clear();
                 txtidcleintp.Clear();
@@ -117,12 +121,17 @@ namespace Coopegas1._0
             else
             {
                 oper.consultasinreaultado("insert into pago(monto_pag,fecha,cliente_idclient,desembolso_iddesemb)values('" + txtpago.Text + "','" + dtppagfec.Text + "','" + txtidclientpag.Text + "','" + txtidprestpag.Text + "')");
-                dgvprestpag.DataSource = oper.cosnsultaconresultado("select idclient as Indentificacion,iddesemb as ID,nombres as Nombres,apellidos as Apellidos, cedula as Cedula,interes as Interes,monto*(interes/100.00) as Cargo ,monto*(interes/100.00)+monto as Monto,,fecha as Fecha, tiempo as Meses, (monto*(interes/100.00)+monto)/tiempo as Cuotas  from desembolso  inner join cliente on   idclient = cliente_idclient");
-                dgvverclient.DataSource = oper.cosnsultaconresultado("select * from cliente");
+                dgvverclient.DataSource = oper.cosnsultaconresultado("select idclient as ID, nombres as Nombres, apellidos as Apellidos, direccion as Direccion,tel as Telefono,cedula as Cedula from cliente");
                 dgvverclientprest.DataSource = oper.cosnsultaconresultado("select * from cliente");
                 dgvvprest.DataSource = oper.cosnsultaconresultado("select iddesemb as ID,nombres as Nombres,apellidos as Apellidos, cedula as Cedula,interes as Interes,monto*(interes/100.00) as Cargo ,monto*(interes/100.00)+monto as Monto,fecha as Fecha, tiempo as Meses, (monto*(interes/100.00)+monto)/tiempo as Cuotas from desembolso  inner join cliente on   idclient = cliente_idclient");
                 dgvprestpag.DataSource = oper.cosnsultaconresultado("select idclient as Indentificacion,iddesemb as ID,nombres as Nombres,apellidos as Apellidos, cedula as Cedula,interes as Interes,monto*(interes/100.00) as Cargo ,monto*(interes/100.0)+monto as Monto,fecha as Fecha, tiempo as Meses, (monto*(interes/100.0)+monto)/tiempo as Cuotas from desembolso  inner join cliente on   idclient = cliente_idclient");
                 dgvpagos.DataSource = oper.cosnsultaconresultado("select nombres as Nombres,apellidos as Apellidos, idpago as ID,monto_pag as Pago,cedula as Cedula from pago inner join cliente on idclient = cliente_idclient");
+                dgvuser.DataSource = oper.cosnsultaconresultado("select * from usuario");
+                dgvmodclient.DataSource = oper.cosnsultaconresultado("select idclient as ID, nombres as Nombres, apellidos as Apellidos, direccion as Direccion,tel as Telefono,cedula as Cedula from cliente");
+                dgvmodprest.DataSource = oper.cosnsultaconresultado("select iddesemb as ID,cliente_idclient as IDC,nombres as Nombres,apellidos as Apellidos, cedula as Cedula,interes as Interes,monto ,monto*(interes/100.00) as Cargo ,monto*(interes/100.00)+monto as Monto,fecha as Fecha, tiempo as Meses, (monto*(interes/100.00)+monto)/tiempo as Cuotas from desembolso  inner join cliente on   idclient = cliente_idclient");
+                dgvmodpago.DataSource = oper.cosnsultaconresultado("select nombres as Nombres,apellidos as Apellidos, idpago as ID,cliente_idclient as IDC,desembolso_iddesemb as IDP,monto_pag as Pago,cedula as Cedula,fecha as Fecha from pago inner join cliente on idclient = cliente_idclient");
+                dgvprestamor.DataSource = oper.cosnsultaconresultado("select id_presta as ID, nombres as Nombres,apellidos as Apellido,cedula as Cedula, montop as Monto,interesp as Interes,tiempop as Tiempo, fechap as Fecha  from prestamo inner join cliente on cli_idclient = idclient");
+
                 txtpago.Clear();
                 txtidclientpag.Clear();
                 txtidprestpag.Clear();
@@ -652,7 +661,17 @@ namespace Coopegas1._0
             {
                 oper.consultasinreaultado("update desembolso set monto = '"+txtmodmont.Text+"',fecha ='"+dtpmodfechprest.Text+"',interes ='"+txtmodintprest.Text+"', tiempo = '"+cmbmodtiemp.Text+ "',cliente_idclient ='"+txtidmodprestcli.Text+"' where iddesemb = '"+txtidmodprest.Text+"'");
                 MessageBox.Show("Datos Actualizados");
+                dgvverclient.DataSource = oper.cosnsultaconresultado("select idclient as ID, nombres as Nombres, apellidos as Apellidos, direccion as Direccion,tel as Telefono,cedula as Cedula from cliente");
+                dgvverclientprest.DataSource = oper.cosnsultaconresultado("select * from cliente");
+                dgvvprest.DataSource = oper.cosnsultaconresultado("select iddesemb as ID,nombres as Nombres,apellidos as Apellidos, cedula as Cedula,interes as Interes,monto*(interes/100.00) as Cargo ,monto*(interes/100.00)+monto as Monto,fecha as Fecha, tiempo as Meses, (monto*(interes/100.00)+monto)/tiempo as Cuotas from desembolso  inner join cliente on   idclient = cliente_idclient");
+                dgvprestpag.DataSource = oper.cosnsultaconresultado("select idclient as Indentificacion,iddesemb as ID,nombres as Nombres,apellidos as Apellidos, cedula as Cedula,interes as Interes,monto*(interes/100.00) as Cargo ,monto*(interes/100.0)+monto as Monto,fecha as Fecha, tiempo as Meses, (monto*(interes/100.0)+monto)/tiempo as Cuotas from desembolso  inner join cliente on   idclient = cliente_idclient");
+                dgvpagos.DataSource = oper.cosnsultaconresultado("select nombres as Nombres,apellidos as Apellidos, idpago as ID,monto_pag as Pago,cedula as Cedula from pago inner join cliente on idclient = cliente_idclient");
+                dgvuser.DataSource = oper.cosnsultaconresultado("select * from usuario");
+                dgvmodclient.DataSource = oper.cosnsultaconresultado("select idclient as ID, nombres as Nombres, apellidos as Apellidos, direccion as Direccion,tel as Telefono,cedula as Cedula from cliente");
                 dgvmodprest.DataSource = oper.cosnsultaconresultado("select iddesemb as ID,cliente_idclient as IDC,nombres as Nombres,apellidos as Apellidos, cedula as Cedula,interes as Interes,monto ,monto*(interes/100.00) as Cargo ,monto*(interes/100.00)+monto as Monto,fecha as Fecha, tiempo as Meses, (monto*(interes/100.00)+monto)/tiempo as Cuotas from desembolso  inner join cliente on   idclient = cliente_idclient");
+                dgvmodpago.DataSource = oper.cosnsultaconresultado("select nombres as Nombres,apellidos as Apellidos, idpago as ID,cliente_idclient as IDC,desembolso_iddesemb as IDP,monto_pag as Pago,cedula as Cedula,fecha as Fecha from pago inner join cliente on idclient = cliente_idclient");
+                dgvprestamor.DataSource = oper.cosnsultaconresultado("select id_presta as ID, nombres as Nombres,apellidos as Apellido,cedula as Cedula, montop as Monto,interesp as Interes,tiempop as Tiempo, fechap as Fecha  from prestamo inner join cliente on cli_idclient = idclient");
+
                 txtidmodprest.Clear();
                 txtidmodprestcli.Clear();
                 txtmodmont.Clear();
@@ -675,7 +694,17 @@ namespace Coopegas1._0
             {
                 oper.consultasinreaultado("delete from desembolso where iddesemb = '"+txtidmodprest.Text+"'");
                 MessageBox.Show("Datos Borrados");
+                dgvverclient.DataSource = oper.cosnsultaconresultado("select idclient as ID, nombres as Nombres, apellidos as Apellidos, direccion as Direccion,tel as Telefono,cedula as Cedula from cliente");
+                dgvverclientprest.DataSource = oper.cosnsultaconresultado("select * from cliente");
+                dgvvprest.DataSource = oper.cosnsultaconresultado("select iddesemb as ID,nombres as Nombres,apellidos as Apellidos, cedula as Cedula,interes as Interes,monto*(interes/100.00) as Cargo ,monto*(interes/100.00)+monto as Monto,fecha as Fecha, tiempo as Meses, (monto*(interes/100.00)+monto)/tiempo as Cuotas from desembolso  inner join cliente on   idclient = cliente_idclient");
+                dgvprestpag.DataSource = oper.cosnsultaconresultado("select idclient as Indentificacion,iddesemb as ID,nombres as Nombres,apellidos as Apellidos, cedula as Cedula,interes as Interes,monto*(interes/100.00) as Cargo ,monto*(interes/100.0)+monto as Monto,fecha as Fecha, tiempo as Meses, (monto*(interes/100.0)+monto)/tiempo as Cuotas from desembolso  inner join cliente on   idclient = cliente_idclient");
+                dgvpagos.DataSource = oper.cosnsultaconresultado("select nombres as Nombres,apellidos as Apellidos, idpago as ID,monto_pag as Pago,cedula as Cedula from pago inner join cliente on idclient = cliente_idclient");
+                dgvuser.DataSource = oper.cosnsultaconresultado("select * from usuario");
+                dgvmodclient.DataSource = oper.cosnsultaconresultado("select idclient as ID, nombres as Nombres, apellidos as Apellidos, direccion as Direccion,tel as Telefono,cedula as Cedula from cliente");
                 dgvmodprest.DataSource = oper.cosnsultaconresultado("select iddesemb as ID,cliente_idclient as IDC,nombres as Nombres,apellidos as Apellidos, cedula as Cedula,interes as Interes,monto ,monto*(interes/100.00) as Cargo ,monto*(interes/100.00)+monto as Monto,fecha as Fecha, tiempo as Meses, (monto*(interes/100.00)+monto)/tiempo as Cuotas from desembolso  inner join cliente on   idclient = cliente_idclient");
+                dgvmodpago.DataSource = oper.cosnsultaconresultado("select nombres as Nombres,apellidos as Apellidos, idpago as ID,cliente_idclient as IDC,desembolso_iddesemb as IDP,monto_pag as Pago,cedula as Cedula,fecha as Fecha from pago inner join cliente on idclient = cliente_idclient");
+                dgvprestamor.DataSource = oper.cosnsultaconresultado("select id_presta as ID, nombres as Nombres,apellidos as Apellido,cedula as Cedula, montop as Monto,interesp as Interes,tiempop as Tiempo, fechap as Fecha  from prestamo inner join cliente on cli_idclient = idclient");
+
                 txtidmodprest.Clear();
                 txtidmodprestcli.Clear();
                 txtmodmont.Clear();
@@ -703,7 +732,17 @@ namespace Coopegas1._0
             {
                 oper.consultasinreaultado("update pago set idpago = '"+txtmoidpago.Text+"',monto_pag ='"+txtmodmontpag.Text+"',fecha ='"+dtpmodpago.Text+ "',cliente_idclient ='"+txtmodidcleinpag.Text+ "',desembolso_iddesemb = '"+txtmodipprespag.Text+ "' where idpago = '"+txtmoidpago.Text+"'");
                 MessageBox.Show("Datos Actualizados");
+                dgvverclient.DataSource = oper.cosnsultaconresultado("select idclient as ID, nombres as Nombres, apellidos as Apellidos, direccion as Direccion,tel as Telefono,cedula as Cedula from cliente");
+                dgvverclientprest.DataSource = oper.cosnsultaconresultado("select * from cliente");
+                dgvvprest.DataSource = oper.cosnsultaconresultado("select iddesemb as ID,nombres as Nombres,apellidos as Apellidos, cedula as Cedula,interes as Interes,monto*(interes/100.00) as Cargo ,monto*(interes/100.00)+monto as Monto,fecha as Fecha, tiempo as Meses, (monto*(interes/100.00)+monto)/tiempo as Cuotas from desembolso  inner join cliente on   idclient = cliente_idclient");
+                dgvprestpag.DataSource = oper.cosnsultaconresultado("select idclient as Indentificacion,iddesemb as ID,nombres as Nombres,apellidos as Apellidos, cedula as Cedula,interes as Interes,monto*(interes/100.00) as Cargo ,monto*(interes/100.0)+monto as Monto,fecha as Fecha, tiempo as Meses, (monto*(interes/100.0)+monto)/tiempo as Cuotas from desembolso  inner join cliente on   idclient = cliente_idclient");
+                dgvpagos.DataSource = oper.cosnsultaconresultado("select nombres as Nombres,apellidos as Apellidos, idpago as ID,monto_pag as Pago,cedula as Cedula from pago inner join cliente on idclient = cliente_idclient");
+                dgvuser.DataSource = oper.cosnsultaconresultado("select * from usuario");
+                dgvmodclient.DataSource = oper.cosnsultaconresultado("select idclient as ID, nombres as Nombres, apellidos as Apellidos, direccion as Direccion,tel as Telefono,cedula as Cedula from cliente");
+                dgvmodprest.DataSource = oper.cosnsultaconresultado("select iddesemb as ID,cliente_idclient as IDC,nombres as Nombres,apellidos as Apellidos, cedula as Cedula,interes as Interes,monto ,monto*(interes/100.00) as Cargo ,monto*(interes/100.00)+monto as Monto,fecha as Fecha, tiempo as Meses, (monto*(interes/100.00)+monto)/tiempo as Cuotas from desembolso  inner join cliente on   idclient = cliente_idclient");
                 dgvmodpago.DataSource = oper.cosnsultaconresultado("select nombres as Nombres,apellidos as Apellidos, idpago as ID,cliente_idclient as IDC,desembolso_iddesemb as IDP,monto_pag as Pago,cedula as Cedula,fecha as Fecha from pago inner join cliente on idclient = cliente_idclient");
+                dgvprestamor.DataSource = oper.cosnsultaconresultado("select id_presta as ID, nombres as Nombres,apellidos as Apellido,cedula as Cedula, montop as Monto,interesp as Interes,tiempop as Tiempo, fechap as Fecha  from prestamo inner join cliente on cli_idclient = idclient");
+
                 txtmoidpago.Clear();
                 txtmodmontpag.Clear();
                 txtmodidcleinpag.Clear();
@@ -719,7 +758,17 @@ namespace Coopegas1._0
             {
                 oper.consultasinreaultado("delete from pago where idpago ='" + txtmoidpago.Text + "'");
                 MessageBox.Show("Datos Borrados");
+                dgvverclient.DataSource = oper.cosnsultaconresultado("select idclient as ID, nombres as Nombres, apellidos as Apellidos, direccion as Direccion,tel as Telefono,cedula as Cedula from cliente");
+                dgvverclientprest.DataSource = oper.cosnsultaconresultado("select * from cliente");
+                dgvvprest.DataSource = oper.cosnsultaconresultado("select iddesemb as ID,nombres as Nombres,apellidos as Apellidos, cedula as Cedula,interes as Interes,monto*(interes/100.00) as Cargo ,monto*(interes/100.00)+monto as Monto,fecha as Fecha, tiempo as Meses, (monto*(interes/100.00)+monto)/tiempo as Cuotas from desembolso  inner join cliente on   idclient = cliente_idclient");
+                dgvprestpag.DataSource = oper.cosnsultaconresultado("select idclient as Indentificacion,iddesemb as ID,nombres as Nombres,apellidos as Apellidos, cedula as Cedula,interes as Interes,monto*(interes/100.00) as Cargo ,monto*(interes/100.0)+monto as Monto,fecha as Fecha, tiempo as Meses, (monto*(interes/100.0)+monto)/tiempo as Cuotas from desembolso  inner join cliente on   idclient = cliente_idclient");
+                dgvpagos.DataSource = oper.cosnsultaconresultado("select nombres as Nombres,apellidos as Apellidos, idpago as ID,monto_pag as Pago,cedula as Cedula from pago inner join cliente on idclient = cliente_idclient");
+                dgvuser.DataSource = oper.cosnsultaconresultado("select * from usuario");
+                dgvmodclient.DataSource = oper.cosnsultaconresultado("select idclient as ID, nombres as Nombres, apellidos as Apellidos, direccion as Direccion,tel as Telefono,cedula as Cedula from cliente");
+                dgvmodprest.DataSource = oper.cosnsultaconresultado("select iddesemb as ID,cliente_idclient as IDC,nombres as Nombres,apellidos as Apellidos, cedula as Cedula,interes as Interes,monto ,monto*(interes/100.00) as Cargo ,monto*(interes/100.00)+monto as Monto,fecha as Fecha, tiempo as Meses, (monto*(interes/100.00)+monto)/tiempo as Cuotas from desembolso  inner join cliente on   idclient = cliente_idclient");
                 dgvmodpago.DataSource = oper.cosnsultaconresultado("select nombres as Nombres,apellidos as Apellidos, idpago as ID,cliente_idclient as IDC,desembolso_iddesemb as IDP,monto_pag as Pago,cedula as Cedula,fecha as Fecha from pago inner join cliente on idclient = cliente_idclient");
+                dgvprestamor.DataSource = oper.cosnsultaconresultado("select id_presta as ID, nombres as Nombres,apellidos as Apellido,cedula as Cedula, montop as Monto,interesp as Interes,tiempop as Tiempo, fechap as Fecha  from prestamo inner join cliente on cli_idclient = idclient");
+
                 txtmoidpago.Clear();
                 txtmodmontpag.Clear();
                 txtmodidcleinpag.Clear();
