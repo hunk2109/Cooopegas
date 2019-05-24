@@ -37,7 +37,7 @@ namespace Coopegas1._0
         private void btnagreclient_Click(object sender, EventArgs e)
         {
             oper.consultasinreaultado("insert into cliente (nombres,apellidos,direccion,tel,cedula)values('" + txtnomb.Text + "','" + txtapelli.Text + "','" + txtdirecc.Text + "','" + txttel.Text + "','" + txtcedu.Text + "')");
-            dgvverclient.DataSource = oper.cosnsultaconresultado("select * from cliente");            
+            dgvverclient.DataSource = oper.cosnsultaconresultado("select idclient as ID, nombres as Nombres, apellidos as Apellidos, direccion as Direccion,tel as Telefono,cedula as Cedula from cliente");
             dgvverclientprest.DataSource = oper.cosnsultaconresultado("select * from cliente");
             dgvvprest.DataSource = oper.cosnsultaconresultado("select iddesemb as ID,nombres as Nombres,apellidos as Apellidos, cedula as Cedula,interes as Interes,monto*(interes/100.00) as Cargo ,monto*(interes/100.00)+monto as Monto,fecha as Fecha, tiempo as Meses, (monto*(interes/100.00)+monto)/tiempo as Cuotas from desembolso  inner join cliente on   idclient = cliente_idclient");
             dgvprestpag.DataSource = oper.cosnsultaconresultado("select idclient as Indentificacion,iddesemb as ID,nombres as Nombres,apellidos as Apellidos, cedula as Cedula,interes as Interes,monto*(interes/100.00) as Cargo ,monto*(interes/100.0)+monto as Monto,fecha as Fecha, tiempo as Meses, (monto*(interes/100.0)+monto)/tiempo as Cuotas from desembolso  inner join cliente on   idclient = cliente_idclient");
@@ -462,7 +462,7 @@ namespace Coopegas1._0
                 DataSet ds = new DataSet();
                 DataTable dt = oper.cosnsultaconresultado("select idclient as ID, nombres as Nombres, apellidos as Apellidos, direccion as Direccion,tel as Telefono,cedula as Cedula from cliente where ID ='"+txtidimpclient.Text+"'");
                 ds.Tables.Add(dt);
-                ds.WriteXml(@"C:\Program Files\hunk2109\COOPEGASI1.0\factura\Clientes.xml");
+                ds.WriteXml(@"C:\factura\Clientes.xml");
                 var f = new visorcliet();
                 f.Show();
 
