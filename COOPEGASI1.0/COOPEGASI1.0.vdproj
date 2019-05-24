@@ -15,12 +15,6 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_027521992C3549A2ADBF104F394BD39C"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_1419E1561F344F5786D16F4EC5CDEE94"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -77,6 +71,12 @@
         {
         "MsmKey" = "8:_473DC666F95788717569D1C64426A358"
         "OwnerKey" = "8:_1419E1561F344F5786D16F4EC5CDEE94"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_48A52293D4964CE4A3DBEE027ED37927"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -377,6 +377,12 @@
         {
         "MsmKey" = "8:_D9A96394BA7C784ABD5FB5D4B8A072EF"
         "OwnerKey" = "8:_1419E1561F344F5786D16F4EC5CDEE94"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_E2551201E6024E12BB84508E488ED938"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -798,26 +804,6 @@
         }
         "File"
         {
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_027521992C3549A2ADBF104F394BD39C"
-            {
-            "SourcePath" = "8:C:\\Program Files\\hunk2109\\COOPEGASI1.0\\bdd\\coopegas.s3db"
-            "TargetName" = "8:coopegas.s3db"
-            "Tag" = "8:"
-            "Folder" = "8:_526D970464CD48D9BFDF83436923A721"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1F3D42DBF3879A33EFA61ED99114D8CE"
             {
             "SourcePath" = "8:Flash.ocx"
@@ -980,6 +966,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_48A52293D4964CE4A3DBEE027ED37927"
+            {
+            "SourcePath" = "8:..\\..\\..\\..\\Downloads\\logo_Ser_icon.ico"
+            "TargetName" = "8:logo_Ser_icon.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_EEA32F7347AE42CBB3E582B54D271CCF"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_4ED706F68B86C2C2846CB5043314D998"
@@ -1436,6 +1442,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E2551201E6024E12BB84508E488ED938"
+            {
+            "SourcePath" = "8:..\\..\\..\\..\\Desktop\\coopegas.s3db"
+            "TargetName" = "8:coopegas.s3db"
+            "Tag" = "8:"
+            "Folder" = "8:_526D970464CD48D9BFDF83436923A721"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_E740004ED110A596A74EFA7A73FCBC42"
             {
             "AssemblyRegister" = "3:1"
@@ -1754,7 +1780,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:COOPEGASI1.0"
         "ProductCode" = "8:{5E9F776B-5462-4AB5-861B-1B778ECDB4FF}"
-        "PackageCode" = "8:{6AE4AE55-546E-44C5-97CA-B9AAE9F12F7D}"
+        "PackageCode" = "8:{6BE8D649-A34D-4A89-AC30-4B68757125B7}"
         "UpgradeCode" = "8:{8078A4DF-F889-4CAE-8F4D-E9F5C36B15D2}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -1885,7 +1911,7 @@
             "Target" = "8:_1419E1561F344F5786D16F4EC5CDEE94"
             "Folder" = "8:_DFFB325645184F1784A6F6564B4AC5FE"
             "WorkingFolder" = "8:_D656C709CB7747D6AD16D4EF0C05FA6A"
-            "Icon" = "8:"
+            "Icon" = "8:_48A52293D4964CE4A3DBEE027ED37927"
             "Feature" = "8:"
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_F45078085E83422CAE98B96D0C925E3F"

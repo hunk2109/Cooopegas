@@ -82,6 +82,11 @@ namespace Coopegas1._0
 
 
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            cmbadmin.Text = "Usuario";
+        }
     }
 }
 
