@@ -232,6 +232,7 @@
             this.label31 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.tabPage16 = new System.Windows.Forms.TabPage();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -1244,6 +1245,7 @@
             this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox5.Controls.Add(this.radioButton1);
             this.groupBox5.Controls.Add(this.dgvprestpag);
             this.groupBox5.Location = new System.Drawing.Point(381, 6);
             this.groupBox5.Name = "groupBox5";
@@ -2434,6 +2436,17 @@
             this.tabPage16.Text = "Backup";
             this.tabPage16.UseVisualStyleBackColor = true;
             // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(7, 24);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(85, 17);
+            this.radioButton1.TabIndex = 1;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "radioButton1";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
             // Principal1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2476,6 +2489,7 @@
             this.tabControl4.ResumeLayout(false);
             this.tabPage8.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvprestpag)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
@@ -2721,5 +2735,6 @@
         private System.Windows.Forms.TextBox txtcuota;
         private System.Windows.Forms.Button impramor;
         private System.Windows.Forms.TabPage tabPage16;
+        private System.Windows.Forms.RadioButton radioButton1;
     }
 }
