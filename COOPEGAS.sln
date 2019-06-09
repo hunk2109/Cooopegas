@@ -1,11 +1,16 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28010.2026
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29001.49
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Coopegas1.0", "Coopegas1.0\Coopegas1.0.csproj", "{EFBCD89B-5EB3-4323-A967-58D4837EC23B}"
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "COOPEGASI1.0", "COOPEGASI1.0\COOPEGASI1.0.vdproj", "{6FEE9C14-7EDB-465A-A7CB-B27A1C6686DD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FAF519AD-8021-48B0-B826-BB393C29B3F0}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\..\Program Files\hunk2109\COOPEGASI1.0\bdd\coopegas.s3db = ..\..\..\..\..\Program Files\hunk2109\COOPEGASI1.0\bdd\coopegas.s3db
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
